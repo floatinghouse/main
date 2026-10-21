@@ -1,0 +1,39 @@
+{
+ "_keterangan": "Parameter kalkulator. 'jenis' menunjukkan asal parameter: measured (survei), literature, assumption (asumsi demonstrasi yang dapat diubah pengguna), requires_validation (hanya boleh diisi setelah hasil model divalidasi).",
+ "_diperbarui": "2026-10-21",
+ "konstanta": {
+  "g": {"nilai": 9.81, "satuan": "m/s²", "jenis": "literature", "keterangan": "Percepatan gravitasi standar (dibulatkan)."},
+  "rho_air_default": {"nilai": 1025, "satuan": "kg/m³", "jenis": "literature", "keterangan": "Nilai tipikal massa jenis air laut. Air payau di lokasi dapat lebih rendah; massa jenis lokal belum diukur.", "min": 990, "maks": 1035}
+ },
+ "elemen_apung": [
+  {
+   "id": "drum200",
+   "nama": "Drum plastik 200 L, dipasang horizontal (seperti di Madrasah Apung)",
+   "diameter_m": 0.581, "panjang_m": 0.890, "volume_nominal_m3": 0.200,
+   "jenis": "measured",
+   "sumber": "Dimensi acuan drum hasil survei Madrasah Apung (paper survei lapangan, Tabel 2)",
+   "keterangan": "Volume nominal 200 L adalah kapasitas isi. Volume luar silinder dari dimensi ±0,236 m³. Pilih dasar volume pada formulir."
+  },
+  {"id": "kustom", "nama": "Silinder horizontal ukuran lain (isi sendiri)", "diameter_m": null, "panjang_m": null, "volume_nominal_m3": null, "jenis": "assumption", "sumber": "Masukan pengguna", "keterangan": "Volume dihitung dari dimensi luar."}
+ ],
+ "contoh_konfigurasi": {
+  "bangunan1": {"nama": "Madrasah Apung — Bangunan 1 (geometri survei)", "panjang_m": 10, "lebar_m": 7, "jumlah_drum": 120, "elemen": "drum200", "jenis": "measured", "catatan": "Jumlah drum adalah estimasi visual. Berat struktur dan beban penggunaan tidak diukur sehingga tidak diisi otomatis."}
+ },
+ "elevasi_muka_air_m_LWS": {
+  "jenis": "processed",
+  "sumber": "Analisis harmonik pasang surut 15 hari, 18 Juni – 2 Juli 2026 (paper survei lapangan, Tabel 4)",
+  "HWS": 1.1406, "MHWS": 0.8119, "MSL": 0.6023, "MLWS": 0.3927, "LWS": 0.0
+ },
+ "elevasi_dasar_sekitar_madrasah_m_LWS": {"atas": 0.2, "bawah": -0.5, "jenis": "processed", "sumber": "Survei batimetri SBES, Juni–Juli 2026"},
+ "skenario_subsidence_cm_per_tahun": [
+  {"nilai": 4.6, "label": "4,6 cm/tahun — Sayung (DInSAR)", "ref": "sutrisno2025"},
+  {"nilai": 6.0, "label": "6 cm/tahun — Sayung (GPS + InSAR, 1977–2024)", "ref": "sutrisno2025"},
+  {"nilai": 16.3, "label": "16,3 cm/tahun — Demak, nilai maksimum kompilasi (skenario batas atas)", "ref": "sidiq2025"}
+ ],
+ "tahun_proyeksi_maks": 10,
+ "parameter_menunggu_validasi": {
+  "faktor_keamanan_daya_apung": {"nilai": null, "jenis": "requires_validation", "keterangan": "Belum ada kriteria yang ditetapkan penelitian. Kalkulator tidak menggunakan faktor keamanan."},
+  "batas_freeboard_minimum_m": {"nilai": null, "jenis": "requires_validation", "keterangan": "Belum ditetapkan."},
+  "beban_aman_gelombang": {"nilai": null, "jenis": "requires_validation", "keterangan": "Menunggu hasil OrcaFlex dan Abaqus."}
+ }
+}

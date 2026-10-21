@@ -1,0 +1,1853 @@
+{
+ "_keterangan": "Data penelitian untuk website Floating House. Setiap entri memiliki status (lihat docs/sumber-dan-asumsi.md). Ubah angka hanya bila sumber diperbarui.",
+ "_diperbarui": "2026-10-21",
+ "status_definisi": {
+  "measured": "Terukur — diperoleh langsung dari pengukuran lapangan",
+  "processed": "Diolah — hasil pengolahan data terukur atau data sekunder",
+  "reported": "Dilaporkan — keterangan narasumber/pengurus, bukan pengukuran",
+  "literature": "Literatur — nilai dari publikasi lain, bukan pengukuran di lokasi",
+  "scenario": "Skenario — asumsi untuk analisis 'bagaimana jika'",
+  "preliminary": "Hasil awal — pemodelan percobaan, belum final",
+  "in_progress": "Sedang berjalan — analisis belum selesai",
+  "validated": "Tervalidasi — telah diverifikasi dan disetujui peneliti",
+  "planned": "Direncanakan — belum dimulai",
+  "general": "Rekomendasi umum — prinsip rekayasa umum, bukan hasil khusus penelitian ini"
+ },
+ "lokasi": {
+  "judul": "Madrasah Apung Timbulsloko",
+  "alamat": "Dusun Karanggeneng, Desa Timbulsloko, Kecamatan Sayung, Kabupaten Demak, Jawa Tengah",
+  "stasiun_pasut": {
+   "lintang": -6.914111,
+   "bujur": 110.518758,
+   "teks": "6°54′50,80″ LS, 110°31′7,53″ BT (UTM 49S: 446.836 mE, 9.235.719 mN)",
+   "status": "measured",
+   "sumber": "Paper survei lapangan tim (Field Assessment of a Community-Built Floating Madrasah…, naskah 2026)"
+  }
+ },
+ "struktur": {
+  "status": "measured",
+  "sumber": "Paper survei lapangan tim (Field Assessment of a Community-Built Floating Madrasah…, naskah 2026)",
+  "tanggal": "Verifikasi lapangan 16–19 Juni 2026",
+  "bangunan": [
+   {
+    "nama": "Bangunan 1",
+    "denah_m": [
+     7,
+     10
+    ]
+   },
+   {
+    "nama": "Bangunan 2",
+    "denah_m": [
+     5,
+     6
+    ]
+   }
+  ],
+  "tinggi_lantai_atap_m": 3.5,
+  "drum": {
+   "jenis": "Drum plastik tertutup, dipasang horizontal",
+   "volume_nominal_L": 200,
+   "diameter_mm": 581,
+   "panjang_mm": 890
+  },
+  "jumlah_drum_bangunan1": {
+   "depan": 17,
+   "samping": 11,
+   "estimasi_total": 120,
+   "status": "processed",
+   "catatan": "Estimasi dari hitungan visual 17 drum sisi depan dan 11 drum sisi samping; bukan inventarisasi per unit"
+  },
+  "kerusakan_dilaporkan": [
+   {
+    "judul": "Tiang pemandu (kayu pancang) terlepas",
+    "status": "reported"
+   },
+   {
+    "judul": "Tali tambat putus",
+    "status": "reported"
+   }
+  ]
+ },
+ "pasut": {
+  "status": "measured",
+  "sumber": "Paper survei lapangan tim (Field Assessment of a Community-Built Floating Madrasah…, naskah 2026); Laporan kemajuan penelitian 2026 (dokumen internal, Agustus 2026)",
+  "periode": "18 Juni – 2 Juli 2026 (15 hari)",
+  "alat": "Automatic Water Level Recorder (AWLR)",
+  "acuan_pembacaan": "Nol palem/AWLR (bukan LWS)",
+  "maks_cm": 113.7,
+  "min_cm": 25.1,
+  "tunggang_pengamatan_cm": 88.6,
+  "S0_cm": 71.61,
+  "formzahl": {
+   "nilai": 1.29,
+   "catatan": "Paper: 1,29; laporan kemajuan: 1,28. Dihitung ulang dari amplitudo: (K1+O1)/(M2+S2) = 26,97/20,96 = 1,287. Klasifikasi: campuran condong harian ganda (0,25 < F ≤ 1,50)."
+  },
+  "konstituen_cm": {
+   "M2": 9.38,
+   "S2": 11.58,
+   "N2": 3.32,
+   "K2": 5.9,
+   "K1": 19.87,
+   "O1": 7.1,
+   "P1": 6.4,
+   "M4": 0.04,
+   "MS4": 0.04
+  },
+  "datum_terhadap_LWS_cm": {
+   "HWS": 114.06,
+   "MHWS": 81.19,
+   "MSL": 60.23,
+   "MLWS": 39.27,
+   "LWS": 0.0
+  },
+  "status_datum": "processed",
+  "catatan_datum": "Datum diturunkan dari analisis harmonik rekaman 15 hari. Rekaman 15 hari belum mencakup kedua musim monsun; nilai ekstrem astronomis jangka panjang dapat berbeda.",
+  "data_jam": {
+   "satuan": "cm terhadap nol palem/AWLR",
+   "status": "measured",
+   "sumber": "Laporan kemajuan penelitian 2026 (dokumen internal, Agustus 2026) (tabel data jam-jaman)",
+   "hari": [
+    {
+     "tanggal": "18-Jun-26",
+     "nilai": [
+      50,
+      56,
+      61,
+      65,
+      68,
+      73,
+      77,
+      83,
+      90,
+      98,
+      105,
+      110,
+      113,
+      112,
+      106,
+      97,
+      85,
+      70,
+      56,
+      44,
+      35,
+      31,
+      30,
+      34
+     ]
+    },
+    {
+     "tanggal": "19-Jun-26",
+     "nilai": [
+      41,
+      49,
+      57,
+      65,
+      70,
+      75,
+      79,
+      82,
+      86,
+      91,
+      98,
+      104,
+      110,
+      114,
+      114,
+      109,
+      100,
+      86,
+      71,
+      55,
+      41,
+      31,
+      26,
+      27
+     ]
+    },
+    {
+     "tanggal": "20-Jun-26",
+     "nilai": [
+      32,
+      42,
+      52,
+      62,
+      71,
+      77,
+      80,
+      82,
+      84,
+      86,
+      90,
+      96,
+      102,
+      109,
+      113,
+      113,
+      108,
+      98,
+      84,
+      67,
+      51,
+      37,
+      28,
+      25
+     ]
+    },
+    {
+     "tanggal": "21-Jun-26",
+     "nilai": [
+      28,
+      37,
+      48,
+      60,
+      71,
+      78,
+      82,
+      84,
+      83,
+      83,
+      84,
+      87,
+      93,
+      100,
+      106,
+      110,
+      109,
+      103,
+      92,
+      77,
+      60,
+      45,
+      33,
+      28
+     ]
+    },
+    {
+     "tanggal": "22-Jun-26",
+     "nilai": [
+      29,
+      35,
+      46,
+      59,
+      71,
+      80,
+      85,
+      86,
+      84,
+      82,
+      80,
+      80,
+      84,
+      89,
+      96,
+      101,
+      103,
+      101,
+      93,
+      81,
+      66,
+      51,
+      40,
+      33
+     ]
+    },
+    {
+     "tanggal": "23-Jun-26",
+     "nilai": [
+      32,
+      37,
+      47,
+      59,
+      71,
+      81,
+      87,
+      89,
+      87,
+      83,
+      79,
+      77,
+      78,
+      81,
+      86,
+      91,
+      94,
+      94,
+      89,
+      80,
+      68,
+      55,
+      44,
+      37
+     ]
+    },
+    {
+     "tanggal": "24-Jun-26",
+     "nilai": [
+      36,
+      40,
+      49,
+      60,
+      73,
+      83,
+      89,
+      91,
+      90,
+      86,
+      81,
+      77,
+      75,
+      76,
+      79,
+      83,
+      85,
+      86,
+      83,
+      76,
+      66,
+      56,
+      47,
+      41
+     ]
+    },
+    {
+     "tanggal": "25-Jun-26",
+     "nilai": [
+      39,
+      43,
+      51,
+      62,
+      73,
+      83,
+      90,
+      93,
+      92,
+      88,
+      83,
+      78,
+      74,
+      73,
+      74,
+      76,
+      78,
+      78,
+      76,
+      71,
+      64,
+      56,
+      48,
+      43
+     ]
+    },
+    {
+     "tanggal": "26-Jun-26",
+     "nilai": [
+      42,
+      45,
+      52,
+      62,
+      73,
+      83,
+      90,
+      93,
+      93,
+      90,
+      85,
+      80,
+      76,
+      73,
+      72,
+      72,
+      72,
+      72,
+      70,
+      67,
+      61,
+      55,
+      50,
+      46
+     ]
+    },
+    {
+     "tanggal": "27-Jun-26",
+     "nilai": [
+      45,
+      48,
+      54,
+      62,
+      72,
+      81,
+      88,
+      92,
+      93,
+      92,
+      88,
+      83,
+      78,
+      74,
+      71,
+      69,
+      68,
+      67,
+      65,
+      62,
+      59,
+      55,
+      51,
+      48
+     ]
+    },
+    {
+     "tanggal": "28-Jun-26",
+     "nilai": [
+      48,
+      50,
+      55,
+      62,
+      70,
+      78,
+      85,
+      90,
+      92,
+      92,
+      90,
+      86,
+      81,
+      76,
+      72,
+      69,
+      66,
+      64,
+      61,
+      59,
+      56,
+      54,
+      52,
+      50
+     ]
+    },
+    {
+     "tanggal": "29-Jun-26",
+     "nilai": [
+      51,
+      53,
+      57,
+      62,
+      69,
+      76,
+      82,
+      88,
+      91,
+      93,
+      92,
+      89,
+      85,
+      81,
+      75,
+      70,
+      66,
+      62,
+      58,
+      55,
+      53,
+      52,
+      51,
+      51
+     ]
+    },
+    {
+     "tanggal": "30-Jun-26",
+     "nilai": [
+      52,
+      54,
+      58,
+      62,
+      68,
+      74,
+      80,
+      85,
+      90,
+      93,
+      94,
+      93,
+      90,
+      86,
+      80,
+      74,
+      68,
+      62,
+      57,
+      53,
+      51,
+      50,
+      50,
+      51
+     ]
+    },
+    {
+     "tanggal": "1-Jul-26",
+     "nilai": [
+      52,
+      55,
+      58,
+      62,
+      66,
+      71,
+      77,
+      83,
+      88,
+      92,
+      96,
+      97,
+      95,
+      92,
+      86,
+      79,
+      72,
+      64,
+      58,
+      52,
+      49,
+      47,
+      48,
+      49
+     ]
+    },
+    {
+     "tanggal": "2-Jul-26",
+     "nilai": [
+      52,
+      54,
+      58,
+      61,
+      65,
+      70,
+      75,
+      80,
+      86,
+      92,
+      96,
+      99,
+      100,
+      97,
+      93,
+      86,
+      77,
+      68,
+      60,
+      53,
+      48,
+      46,
+      46,
+      47
+     ]
+    }
+   ]
+  }
+ },
+ "batimetri": {
+  "status": "processed",
+  "sumber": "Paper survei lapangan tim (Field Assessment of a Community-Built Floating Madrasah…, naskah 2026)",
+  "alat": "SBES CHCNAV D230 + GNSS CHCNAV i50; navigasi HYDROpro",
+  "area_rencana_ha": 1500,
+  "spasi_lajur_m": 200,
+  "datum": "LWS",
+  "elevasi_area_survei_m_LWS": [
+   0.4,
+   -4.3
+  ],
+  "elevasi_sekitar_madrasah_m_LWS": [
+   0.2,
+   -0.5
+  ],
+  "catatan": "Elevasi dasar terhadap LWS bukan kedalaman air. Kedalaman = elevasi muka air − elevasi dasar. Sebagian area (timur, dekat mangrove, tambak/jaring) tidak tersurvei.",
+  "referensi_geodetik": {
+   "ellipsoid": "WGS 84",
+   "proyeksi": "UTM Zona 49 Selatan",
+   "titik_kontrol": "BM SMG5 (0,25 m LWS) dan Titik Bantu (±1,232 m LWS)",
+   "CORS": "CSMG dan CSEM"
+  }
+ },
+ "angin": {
+  "status": "processed",
+  "sumber": "Paper survei lapangan tim (Field Assessment of a Community-Built Floating Madrasah…, naskah 2026)",
+  "data": "ECMWF hindcast per jam 2006–2025 (u10, v10)",
+  "titik": "6,91° LS, 110,51° BT",
+  "rata_rata_ms": 1.62,
+  "maks_ms": 9.67,
+  "frekuensi_arah_teratas_persen": {
+   "SE": 26.2,
+   "NW": 19.86,
+   "S": 19.69
+  },
+  "bulanan_ms": {
+   "Januari": 2.15,
+   "Februari": 2.11,
+   "April": 1.17
+  },
+  "musiman": "Desember–Januari dominan barat–barat laut; pertengahan tahun dominan selatan–tenggara",
+  "maks_tahunan_ms": {
+   "2006": {
+    "N": 3.92,
+    "NE": 3.58,
+    "E": 4.41,
+    "SE": 4.96,
+    "S": 5.0,
+    "SW": 2.11,
+    "W": 4.96,
+    "NW": 6.87
+   },
+   "2007": {
+    "N": 3.53,
+    "NE": 3.26,
+    "E": 5.3,
+    "SE": 4.51,
+    "S": 4.61,
+    "SW": 2.07,
+    "W": 4.91,
+    "NW": 8.9
+   },
+   "2008": {
+    "N": 3.55,
+    "NE": 3.68,
+    "E": 4.48,
+    "SE": 4.8,
+    "S": 4.99,
+    "SW": 2.27,
+    "W": 5.55,
+    "NW": 8.21
+   },
+   "2009": {
+    "N": 3.33,
+    "NE": 3.36,
+    "E": 5.1,
+    "SE": 4.61,
+    "S": 4.28,
+    "SW": 2.76,
+    "W": 6.5,
+    "NW": 7.72
+   },
+   "2010": {
+    "N": 3.4,
+    "NE": 3.12,
+    "E": 3.81,
+    "SE": 3.84,
+    "S": 2.85,
+    "SW": 2.16,
+    "W": 4.95,
+    "NW": 7.37
+   },
+   "2011": {
+    "N": 3.32,
+    "NE": 4.43,
+    "E": 5.11,
+    "SE": 4.34,
+    "S": 4.03,
+    "SW": 2.34,
+    "W": 6.43,
+    "NW": 8.64
+   },
+   "2012": {
+    "N": 3.68,
+    "NE": 3.07,
+    "E": 4.66,
+    "SE": 4.43,
+    "S": 4.26,
+    "SW": 2.05,
+    "W": 6.97,
+    "NW": 9.67
+   },
+   "2013": {
+    "N": 3.52,
+    "NE": 3.74,
+    "E": 4.75,
+    "SE": 4.74,
+    "S": 4.26,
+    "SW": 2.42,
+    "W": 6.1,
+    "NW": 8.22
+   },
+   "2014": {
+    "N": 3.88,
+    "NE": 4.4,
+    "E": 5.53,
+    "SE": 4.56,
+    "S": 4.23,
+    "SW": 2.61,
+    "W": 6.07,
+    "NW": 7.91
+   },
+   "2015": {
+    "N": 4.18,
+    "NE": 4.09,
+    "E": 5.27,
+    "SE": 4.95,
+    "S": 4.6,
+    "SW": 2.31,
+    "W": 4.56,
+    "NW": 6.45
+   },
+   "2016": {
+    "N": 2.94,
+    "NE": 2.72,
+    "E": 3.73,
+    "SE": 3.39,
+    "S": 3.21,
+    "SW": 2.4,
+    "W": 5.09,
+    "NW": 6.63
+   },
+   "2017": {
+    "N": 3.84,
+    "NE": 4.31,
+    "E": 4.75,
+    "SE": 5.64,
+    "S": 5.26,
+    "SW": 2.4,
+    "W": 5.06,
+    "NW": 8.7
+   },
+   "2018": {
+    "N": 3.81,
+    "NE": 3.38,
+    "E": 4.71,
+    "SE": 4.7,
+    "S": 5.99,
+    "SW": 2.98,
+    "W": 5.91,
+    "NW": 7.89
+   },
+   "2019": {
+    "N": 4.02,
+    "NE": 4.18,
+    "E": 4.64,
+    "SE": 4.26,
+    "S": 4.11,
+    "SW": 1.93,
+    "W": 5.0,
+    "NW": 7.49
+   },
+   "2020": {
+    "N": 3.73,
+    "NE": 4.09,
+    "E": 5.26,
+    "SE": 4.94,
+    "S": 4.52,
+    "SW": 2.75,
+    "W": 4.74,
+    "NW": 8.35
+   },
+   "2021": {
+    "N": 3.44,
+    "NE": 3.67,
+    "E": 4.6,
+    "SE": 4.37,
+    "S": 3.74,
+    "SW": 2.62,
+    "W": 6.13,
+    "NW": 7.63
+   },
+   "2022": {
+    "N": 3.66,
+    "NE": 2.91,
+    "E": 3.61,
+    "SE": 3.66,
+    "S": 3.63,
+    "SW": 1.97,
+    "W": 6.29,
+    "NW": 8.05
+   },
+   "2023": {
+    "N": 3.81,
+    "NE": 3.42,
+    "E": 4.73,
+    "SE": 4.56,
+    "S": 4.01,
+    "SW": 2.13,
+    "W": 6.28,
+    "NW": 7.46
+   },
+   "2024": {
+    "N": 3.91,
+    "NE": 2.8,
+    "E": 4.66,
+    "SE": 4.18,
+    "S": 4.59,
+    "SW": 2.27,
+    "W": 5.95,
+    "NW": 7.74
+   },
+   "2025": {
+    "N": 3.13,
+    "NE": 3.14,
+    "E": 5.48,
+    "SE": 4.66,
+    "S": 4.81,
+    "SW": 2.18,
+    "W": 5.53,
+    "NW": 8.11
+   }
+  },
+  "ekstrem_ms": {
+   "2": {
+    "N": 3.67,
+    "NE": 3.57,
+    "E": 4.8,
+    "SE": 4.51,
+    "S": 4.35,
+    "SW": 2.29,
+    "W": 5.65,
+    "NW": 7.86
+   },
+   "5": {
+    "N": 3.89,
+    "NE": 4.01,
+    "E": 5.18,
+    "SE": 4.92,
+    "S": 4.93,
+    "SW": 2.54,
+    "W": 6.23,
+    "NW": 8.52
+   },
+   "10": {
+    "N": 3.99,
+    "NE": 4.23,
+    "E": 5.35,
+    "SE": 5.12,
+    "S": 5.23,
+    "SW": 2.71,
+    "W": 6.51,
+    "NW": 8.89
+   },
+   "20": {
+    "N": 4.07,
+    "NE": 4.39,
+    "E": 5.49,
+    "SE": 5.29,
+    "S": 5.48,
+    "SW": 2.87,
+    "W": 6.73,
+    "NW": 9.21
+   },
+   "50": {
+    "N": 4.15,
+    "NE": 4.56,
+    "E": 5.62,
+    "SE": 5.47,
+    "S": 5.77,
+    "SW": 3.07,
+    "W": 6.94,
+    "NW": 9.57
+   },
+   "100": {
+    "N": 4.2,
+    "NE": 4.66,
+    "E": 5.71,
+    "SE": 5.59,
+    "S": 5.95,
+    "SW": 3.23,
+    "W": 7.07,
+    "NW": 9.83
+   }
+  },
+  "ekstrem_catatan": "Distribusi terbaik (RMSE terendah) dari Weibull, Normal, Log-Normal, Log-Pearson III, Gumbel, GEV. Sektor NW mengontrol semua periode ulang (Log-Normal)."
+ },
+ "gelombang": {
+  "status": "processed",
+  "sumber": "Paper survei lapangan tim (Field Assessment of a Community-Built Floating Madrasah…, naskah 2026)",
+  "data": "ECMWF hindcast per jam 2006–2025 (Hs, Tp, MWD)",
+  "titik": "6,50° LS, 110,00° BT (perairan lepas, bukan lokasi madrasah)",
+  "Hs_rata_rata_m": 0.427,
+  "Hs_maks_m": 2.999,
+  "frekuensi_arah_teratas_persen": {
+   "NW": 33.13,
+   "E": 32.41,
+   "NE": 22.95
+  },
+  "Hs_bulanan_m": {
+   "Januari": 0.793,
+   "Februari": 0.676,
+   "Desember": 0.531,
+   "April": 0.256,
+   "November": 0.247
+  },
+  "musiman": "Desember–Februari dominan barat laut; pertengahan tahun dominan timur–timur laut",
+  "maks_tahunan": {
+   "2006": {
+    "N": {
+     "Hs": 0.36,
+     "Tp": 2.64
+    },
+    "NE": {
+     "Hs": 1.01,
+     "Tp": 5.6
+    },
+    "E": {
+     "Hs": 0.88,
+     "Tp": 4.05
+    },
+    "SE": {
+     "Hs": 0.62,
+     "Tp": 3.89
+    },
+    "S": {
+     "Hs": 0.39,
+     "Tp": 2.78
+    },
+    "SW": {
+     "Hs": 0.2,
+     "Tp": 2.34
+    },
+    "W": {
+     "Hs": 2.91,
+     "Tp": 7.79
+    },
+    "NW": {
+     "Hs": 3.0,
+     "Tp": 7.68
+    }
+   },
+   "2007": {
+    "N": {
+     "Hs": 0.4,
+     "Tp": 4.19
+    },
+    "NE": {
+     "Hs": 1.11,
+     "Tp": 6.11
+    },
+    "E": {
+     "Hs": 1.06,
+     "Tp": 6.84
+    },
+    "SE": {
+     "Hs": 0.44,
+     "Tp": 3.3
+    },
+    "S": {
+     "Hs": 0.27,
+     "Tp": 3.06
+    },
+    "SW": {
+     "Hs": 0.26,
+     "Tp": 3.26
+    },
+    "W": {
+     "Hs": 2.17,
+     "Tp": 6.8
+    },
+    "NW": {
+     "Hs": 2.26,
+     "Tp": 6.98
+    }
+   },
+   "2008": {
+    "N": {
+     "Hs": 0.31,
+     "Tp": 2.54
+    },
+    "NE": {
+     "Hs": 1.02,
+     "Tp": 4.35
+    },
+    "E": {
+     "Hs": 1.05,
+     "Tp": 4.83
+    },
+    "SE": {
+     "Hs": 0.57,
+     "Tp": 3.61
+    },
+    "S": {
+     "Hs": 0.2,
+     "Tp": 2.24
+    },
+    "SW": {
+     "Hs": 0.2,
+     "Tp": 2.21
+    },
+    "W": {
+     "Hs": 1.18,
+     "Tp": 5.65
+    },
+    "NW": {
+     "Hs": 2.22,
+     "Tp": 6.73
+    }
+   },
+   "2009": {
+    "N": {
+     "Hs": 0.37,
+     "Tp": 2.89
+    },
+    "NE": {
+     "Hs": 0.99,
+     "Tp": 5.66
+    },
+    "E": {
+     "Hs": 0.86,
+     "Tp": 6.79
+    },
+    "SE": {
+     "Hs": 0.55,
+     "Tp": 3.47
+    },
+    "S": {
+     "Hs": 0.32,
+     "Tp": 3.18
+    },
+    "SW": {
+     "Hs": 0.29,
+     "Tp": 2.62
+    },
+    "W": {
+     "Hs": 1.49,
+     "Tp": 5.81
+    },
+    "NW": {
+     "Hs": 2.27,
+     "Tp": 6.49
+    }
+   },
+   "2010": {
+    "N": {
+     "Hs": 0.5,
+     "Tp": 2.73
+    },
+    "NE": {
+     "Hs": 0.75,
+     "Tp": 4.21
+    },
+    "E": {
+     "Hs": 0.92,
+     "Tp": 6.05
+    },
+    "SE": {
+     "Hs": 0.34,
+     "Tp": 3.11
+    },
+    "S": {
+     "Hs": 0.21,
+     "Tp": 2.43
+    },
+    "SW": {
+     "Hs": 0.27,
+     "Tp": 2.47
+    },
+    "W": {
+     "Hs": 1.08,
+     "Tp": 5.29
+    },
+    "NW": {
+     "Hs": 2.3,
+     "Tp": 6.98
+    }
+   },
+   "2011": {
+    "N": {
+     "Hs": 0.37,
+     "Tp": 2.78
+    },
+    "NE": {
+     "Hs": 0.83,
+     "Tp": 5.62
+    },
+    "E": {
+     "Hs": 0.8,
+     "Tp": 3.82
+    },
+    "SE": {
+     "Hs": 0.55,
+     "Tp": 3.51
+    },
+    "S": {
+     "Hs": 0.32,
+     "Tp": 3.2
+    },
+    "SW": {
+     "Hs": 0.29,
+     "Tp": 3.35
+    },
+    "W": {
+     "Hs": 1.92,
+     "Tp": 6.31
+    },
+    "NW": {
+     "Hs": 2.5,
+     "Tp": 7.46
+    }
+   },
+   "2012": {
+    "N": {
+     "Hs": 0.35,
+     "Tp": 2.97
+    },
+    "NE": {
+     "Hs": 0.78,
+     "Tp": 3.99
+    },
+    "E": {
+     "Hs": 1.02,
+     "Tp": 6.85
+    },
+    "SE": {
+     "Hs": 0.62,
+     "Tp": 3.81
+    },
+    "S": {
+     "Hs": 0.34,
+     "Tp": 3.04
+    },
+    "SW": {
+     "Hs": 0.29,
+     "Tp": 3.25
+    },
+    "W": {
+     "Hs": 2.0,
+     "Tp": 6.29
+    },
+    "NW": {
+     "Hs": 2.36,
+     "Tp": 6.9
+    }
+   },
+   "2013": {
+    "N": {
+     "Hs": 0.32,
+     "Tp": 2.7
+    },
+    "NE": {
+     "Hs": 1.09,
+     "Tp": 4.43
+    },
+    "E": {
+     "Hs": 1.25,
+     "Tp": 5.29
+    },
+    "SE": {
+     "Hs": 0.68,
+     "Tp": 3.71
+    },
+    "S": {
+     "Hs": 0.32,
+     "Tp": 2.76
+    },
+    "SW": {
+     "Hs": 0.3,
+     "Tp": 2.82
+    },
+    "W": {
+     "Hs": 2.59,
+     "Tp": 7.12
+    },
+    "NW": {
+     "Hs": 2.52,
+     "Tp": 6.99
+    }
+   },
+   "2014": {
+    "N": {
+     "Hs": 0.32,
+     "Tp": 2.65
+    },
+    "NE": {
+     "Hs": 0.9,
+     "Tp": 4.57
+    },
+    "E": {
+     "Hs": 1.31,
+     "Tp": 8.04
+    },
+    "SE": {
+     "Hs": 0.44,
+     "Tp": 3.35
+    },
+    "S": {
+     "Hs": 0.34,
+     "Tp": 2.81
+    },
+    "SW": {
+     "Hs": 0.47,
+     "Tp": 3.03
+    },
+    "W": {
+     "Hs": 1.25,
+     "Tp": 5.14
+    },
+    "NW": {
+     "Hs": 2.25,
+     "Tp": 6.91
+    }
+   },
+   "2015": {
+    "N": {
+     "Hs": 0.32,
+     "Tp": 2.63
+    },
+    "NE": {
+     "Hs": 1.25,
+     "Tp": 4.99
+    },
+    "E": {
+     "Hs": 1.39,
+     "Tp": 6.69
+    },
+    "SE": {
+     "Hs": 0.36,
+     "Tp": 2.85
+    },
+    "S": {
+     "Hs": 0.26,
+     "Tp": 2.63
+    },
+    "SW": {
+     "Hs": 0.24,
+     "Tp": 2.59
+    },
+    "W": {
+     "Hs": 1.25,
+     "Tp": 4.9
+    },
+    "NW": {
+     "Hs": 2.0,
+     "Tp": 6.88
+    }
+   },
+   "2016": {
+    "N": {
+     "Hs": 0.48,
+     "Tp": 3.85
+    },
+    "NE": {
+     "Hs": 0.69,
+     "Tp": 6.11
+    },
+    "E": {
+     "Hs": 0.83,
+     "Tp": 3.76
+    },
+    "SE": {
+     "Hs": 0.43,
+     "Tp": 2.7
+    },
+    "S": {
+     "Hs": 0.32,
+     "Tp": 2.69
+    },
+    "SW": {
+     "Hs": 0.29,
+     "Tp": 2.62
+    },
+    "W": {
+     "Hs": 1.3,
+     "Tp": 5.17
+    },
+    "NW": {
+     "Hs": 1.67,
+     "Tp": 6.14
+    }
+   },
+   "2017": {
+    "N": {
+     "Hs": 0.38,
+     "Tp": 5.12
+    },
+    "NE": {
+     "Hs": 1.13,
+     "Tp": 4.7
+    },
+    "E": {
+     "Hs": 1.07,
+     "Tp": 4.86
+    },
+    "SE": {
+     "Hs": 0.83,
+     "Tp": 4.27
+    },
+    "S": {
+     "Hs": 0.3,
+     "Tp": 2.84
+    },
+    "SW": {
+     "Hs": 0.27,
+     "Tp": 2.68
+    },
+    "W": {
+     "Hs": 1.71,
+     "Tp": 5.91
+    },
+    "NW": {
+     "Hs": 2.26,
+     "Tp": 7.03
+    }
+   },
+   "2018": {
+    "N": {
+     "Hs": 0.38,
+     "Tp": 2.67
+    },
+    "NE": {
+     "Hs": 0.85,
+     "Tp": 4.0
+    },
+    "E": {
+     "Hs": 1.05,
+     "Tp": 4.71
+    },
+    "SE": {
+     "Hs": 0.76,
+     "Tp": 4.3
+    },
+    "S": {
+     "Hs": 0.28,
+     "Tp": 2.62
+    },
+    "SW": {
+     "Hs": 0.21,
+     "Tp": 2.34
+    },
+    "W": {
+     "Hs": 1.61,
+     "Tp": 6.04
+    },
+    "NW": {
+     "Hs": 1.89,
+     "Tp": 6.16
+    }
+   },
+   "2019": {
+    "N": {
+     "Hs": 0.41,
+     "Tp": 5.32
+    },
+    "NE": {
+     "Hs": 1.05,
+     "Tp": 4.61
+    },
+    "E": {
+     "Hs": 1.26,
+     "Tp": 8.31
+    },
+    "SE": {
+     "Hs": 0.79,
+     "Tp": 3.9
+    },
+    "S": {
+     "Hs": 0.22,
+     "Tp": 2.49
+    },
+    "SW": {
+     "Hs": 0.22,
+     "Tp": 2.5
+    },
+    "W": {
+     "Hs": 1.15,
+     "Tp": 5.12
+    },
+    "NW": {
+     "Hs": 1.84,
+     "Tp": 6.7
+    }
+   },
+   "2020": {
+    "N": {
+     "Hs": 0.39,
+     "Tp": 2.72
+    },
+    "NE": {
+     "Hs": 0.99,
+     "Tp": 4.44
+    },
+    "E": {
+     "Hs": 0.99,
+     "Tp": 4.47
+    },
+    "SE": {
+     "Hs": 0.5,
+     "Tp": 3.5
+    },
+    "S": {
+     "Hs": 0.26,
+     "Tp": 2.61
+    },
+    "SW": {
+     "Hs": 0.25,
+     "Tp": 2.48
+    },
+    "W": {
+     "Hs": 1.34,
+     "Tp": 5.25
+    },
+    "NW": {
+     "Hs": 2.49,
+     "Tp": 7.06
+    }
+   },
+   "2021": {
+    "N": {
+     "Hs": 0.43,
+     "Tp": 3.02
+    },
+    "NE": {
+     "Hs": 0.88,
+     "Tp": 4.44
+    },
+    "E": {
+     "Hs": 0.93,
+     "Tp": 4.34
+    },
+    "SE": {
+     "Hs": 0.52,
+     "Tp": 3.24
+    },
+    "S": {
+     "Hs": 0.35,
+     "Tp": 3.25
+    },
+    "SW": {
+     "Hs": 0.31,
+     "Tp": 2.92
+    },
+    "W": {
+     "Hs": 1.78,
+     "Tp": 5.64
+    },
+    "NW": {
+     "Hs": 2.07,
+     "Tp": 6.35
+    }
+   },
+   "2022": {
+    "N": {
+     "Hs": 0.41,
+     "Tp": 2.86
+    },
+    "NE": {
+     "Hs": 0.66,
+     "Tp": 3.79
+    },
+    "E": {
+     "Hs": 0.84,
+     "Tp": 3.93
+    },
+    "SE": {
+     "Hs": 0.42,
+     "Tp": 3.61
+    },
+    "S": {
+     "Hs": 0.36,
+     "Tp": 3.54
+    },
+    "SW": {
+     "Hs": 0.28,
+     "Tp": 2.61
+    },
+    "W": {
+     "Hs": 1.74,
+     "Tp": 6.11
+    },
+    "NW": {
+     "Hs": 2.39,
+     "Tp": 6.99
+    }
+   },
+   "2023": {
+    "N": {
+     "Hs": 0.36,
+     "Tp": 2.69
+    },
+    "NE": {
+     "Hs": 0.79,
+     "Tp": 3.96
+    },
+    "E": {
+     "Hs": 0.97,
+     "Tp": 6.62
+    },
+    "SE": {
+     "Hs": 0.61,
+     "Tp": 3.57
+    },
+    "S": {
+     "Hs": 0.34,
+     "Tp": 2.91
+    },
+    "SW": {
+     "Hs": 0.33,
+     "Tp": 2.99
+    },
+    "W": {
+     "Hs": 1.58,
+     "Tp": 6.29
+    },
+    "NW": {
+     "Hs": 1.98,
+     "Tp": 6.3
+    }
+   },
+   "2024": {
+    "N": {
+     "Hs": 0.38,
+     "Tp": 5.18
+    },
+    "NE": {
+     "Hs": 0.87,
+     "Tp": 6.16
+    },
+    "E": {
+     "Hs": 0.89,
+     "Tp": 4.08
+    },
+    "SE": {
+     "Hs": 0.48,
+     "Tp": 3.28
+    },
+    "S": {
+     "Hs": 0.38,
+     "Tp": 3.17
+    },
+    "SW": {
+     "Hs": 0.27,
+     "Tp": 2.58
+    },
+    "W": {
+     "Hs": 1.72,
+     "Tp": 6.25
+    },
+    "NW": {
+     "Hs": 1.82,
+     "Tp": 6.22
+    }
+   },
+   "2025": {
+    "N": {
+     "Hs": 0.35,
+     "Tp": 5.95
+    },
+    "NE": {
+     "Hs": 0.93,
+     "Tp": 5.56
+    },
+    "E": {
+     "Hs": 0.95,
+     "Tp": 4.62
+    },
+    "SE": {
+     "Hs": 0.43,
+     "Tp": 3.36
+    },
+    "S": {
+     "Hs": 0.23,
+     "Tp": 2.64
+    },
+    "SW": {
+     "Hs": 0.24,
+     "Tp": 2.47
+    },
+    "W": {
+     "Hs": 1.58,
+     "Tp": 5.98
+    },
+    "NW": {
+     "Hs": 2.04,
+     "Tp": 6.65
+    }
+   }
+  },
+  "ekstrem": {
+   "2": {
+    "N": {
+     "Hs": 0.37,
+     "Tp": 4.19
+    },
+    "NE": {
+     "Hs": 0.93,
+     "Tp": 5.87
+    },
+    "E": {
+     "Hs": 0.99,
+     "Tp": 6.01
+    },
+    "SE": {
+     "Hs": 0.53,
+     "Tp": 4.79
+    },
+    "S": {
+     "Hs": 0.31,
+     "Tp": 3.92
+    },
+    "SW": {
+     "Hs": 0.26,
+     "Tp": 3.69
+    },
+    "W": {
+     "Hs": 1.55,
+     "Tp": 7.11
+    },
+    "NW": {
+     "Hs": 2.18,
+     "Tp": 8.06
+    }
+   },
+   "5": {
+    "N": {
+     "Hs": 0.42,
+     "Tp": 4.37
+    },
+    "NE": {
+     "Hs": 1.06,
+     "Tp": 6.16
+    },
+    "E": {
+     "Hs": 1.12,
+     "Tp": 6.31
+    },
+    "SE": {
+     "Hs": 0.65,
+     "Tp": 5.16
+    },
+    "S": {
+     "Hs": 0.35,
+     "Tp": 4.11
+    },
+    "SW": {
+     "Hs": 0.31,
+     "Tp": 3.93
+    },
+    "W": {
+     "Hs": 1.97,
+     "Tp": 7.76
+    },
+    "NW": {
+     "Hs": 2.45,
+     "Tp": 8.41
+    }
+   },
+   "10": {
+    "N": {
+     "Hs": 0.45,
+     "Tp": 4.48
+    },
+    "NE": {
+     "Hs": 1.12,
+     "Tp": 6.31
+    },
+    "E": {
+     "Hs": 1.22,
+     "Tp": 6.5
+    },
+    "SE": {
+     "Hs": 0.73,
+     "Tp": 5.37
+    },
+    "S": {
+     "Hs": 0.37,
+     "Tp": 4.18
+    },
+    "SW": {
+     "Hs": 0.35,
+     "Tp": 4.08
+    },
+    "W": {
+     "Hs": 2.29,
+     "Tp": 8.2
+    },
+    "NW": {
+     "Hs": 2.6,
+     "Tp": 8.6
+    }
+   },
+   "20": {
+    "N": {
+     "Hs": 0.47,
+     "Tp": 4.59
+    },
+    "NE": {
+     "Hs": 1.18,
+     "Tp": 6.43
+    },
+    "E": {
+     "Hs": 1.3,
+     "Tp": 6.67
+    },
+    "SE": {
+     "Hs": 0.79,
+     "Tp": 5.55
+    },
+    "S": {
+     "Hs": 0.38,
+     "Tp": 4.22
+    },
+    "SW": {
+     "Hs": 0.38,
+     "Tp": 4.22
+    },
+    "W": {
+     "Hs": 2.63,
+     "Tp": 8.64
+    },
+    "NW": {
+     "Hs": 2.73,
+     "Tp": 8.76
+    }
+   },
+   "50": {
+    "N": {
+     "Hs": 0.51,
+     "Tp": 4.72
+    },
+    "NE": {
+     "Hs": 1.24,
+     "Tp": 6.55
+    },
+    "E": {
+     "Hs": 1.42,
+     "Tp": 6.88
+    },
+    "SE": {
+     "Hs": 0.88,
+     "Tp": 5.76
+    },
+    "S": {
+     "Hs": 0.39,
+     "Tp": 4.25
+    },
+    "SW": {
+     "Hs": 0.42,
+     "Tp": 4.39
+    },
+    "W": {
+     "Hs": 3.14,
+     "Tp": 9.22
+    },
+    "NW": {
+     "Hs": 2.9,
+     "Tp": 8.95
+    }
+   },
+   "100": {
+    "N": {
+     "Hs": 0.54,
+     "Tp": 4.81
+    },
+    "NE": {
+     "Hs": 1.29,
+     "Tp": 6.63
+    },
+    "E": {
+     "Hs": 1.5,
+     "Tp": 7.03
+    },
+    "SE": {
+     "Hs": 0.94,
+     "Tp": 5.9
+    },
+    "S": {
+     "Hs": 0.39,
+     "Tp": 4.27
+    },
+    "SW": {
+     "Hs": 0.45,
+     "Tp": 4.51
+    },
+    "W": {
+     "Hs": 3.57,
+     "Tp": 9.67
+    },
+    "NW": {
+     "Hs": 3.01,
+     "Tp": 9.08
+    }
+   }
+  },
+  "ekstrem_catatan": "NW mengontrol periode ulang 2–20 tahun (Log-Pearson III); W mengontrol 50–100 tahun (GEV). Tp dari hubungan power-law Hs–Tp.",
+  "batas_penggunaan": "Nilai lepas pantai. Tidak boleh diterapkan langsung di madrasah; menjadi syarat batas pemodelan transformasi gelombang."
+ },
+ "subsidence_literatur": {
+  "status": "literature",
+  "catatan": "Belum ada publikasi yang melaporkan pengukuran khusus di Desa Timbulsloko. Nilai Sayung (4,6–6 cm/tahun) adalah acuan terdekat secara geografis; 16,3 cm/tahun (Demak) dipakai penelitian sebagai skenario batas atas.",
+  "baris": [
+   {
+    "lokasi": "Sayung, Demak",
+    "metode": "GPS dan InSAR terintegrasi",
+    "laju": "6 ± 0,8",
+    "laju_cm": 6,
+    "periode": "1977–2024",
+    "ref": "sutrisno2025"
+   },
+   {
+    "lokasi": "Sayung, Demak",
+    "metode": "DInSAR",
+    "laju": "4,6",
+    "laju_cm": 4.6,
+    "periode": "Tidak dinyatakan",
+    "ref": "sutrisno2025"
+   },
+   {
+    "lokasi": "Pesisir Demak",
+    "metode": "Analisis multitemporal",
+    "laju": "6",
+    "laju_cm": 6,
+    "periode": "2011–2031",
+    "ref": "sutrisno2025"
+   },
+   {
+    "lokasi": "Semarang dan Demak bagian barat",
+    "metode": "SBAS InSAR Sentinel-1",
+    "laju": "12",
+    "laju_cm": 12,
+    "periode": "2015–2024",
+    "ref": "azeriansyah2025"
+   },
+   {
+    "lokasi": "Demak bagian timur",
+    "metode": "SBAS InSAR Sentinel-1",
+    "laju": "≈4",
+    "laju_cm": 4,
+    "periode": "2015–2024",
+    "ref": "azeriansyah2025"
+   },
+   {
+    "lokasi": "Demak",
+    "metode": "SAR interferometry Sentinel-1",
+    "laju": "8",
+    "laju_cm": 8,
+    "periode": "2016–2020",
+    "ref": "sidiq2021"
+   },
+   {
+    "lokasi": "Demak",
+    "metode": "SBAS InSAR Sentinel-1",
+    "laju": "16,3",
+    "laju_cm": 16.3,
+    "periode": "2017–2023",
+    "ref": "sidiq2025"
+   },
+   {
+    "lokasi": "Semarang, Demak, Pekalongan",
+    "metode": "Tidak dinyatakan spesifik",
+    "laju": "5–15",
+    "laju_cm": null,
+    "periode": "Tidak dinyatakan",
+    "ref": "sutrisno2025"
+   },
+   {
+    "lokasi": "Semarang timur laut dekat Demak",
+    "metode": "InSAR Sentinel-1",
+    "laju": "8",
+    "laju_cm": 8,
+    "periode": "2015–2020",
+    "ref": "lo2022"
+   },
+   {
+    "lokasi": "LIK Kaligawe, Semarang timur laut",
+    "metode": "Model numerik dikalibrasi InSAR dan GPS",
+    "laju": "3,68",
+    "laju_cm": 3.68,
+    "periode": "2020–2050",
+    "ref": "lo2022"
+   }
+  ]
+ }
+}

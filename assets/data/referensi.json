@@ -1,0 +1,159 @@
+{
+ "_keterangan": "Daftar pustaka. 'verifikasi': 'dicek' = judul/terbitan ditemukan melalui penelusuran web pada 21 Okt 2026; 'dari_naskah' = disalin dari daftar pustaka naskah tim, belum dicek ulang; 'belum_dicek' = rujukan umum yang ditambahkan pengembang situs. 'asal': sumber yang memuat rujukan ini.",
+ "_diperbarui": "2026-10-21",
+ "kelompok": [
+  {
+   "id": "data",
+   "judul": "Sumber data lapangan dan data sekunder"
+  },
+  {
+   "id": "subsidence",
+   "judul": "Penurunan muka tanah"
+  },
+  {
+   "id": "gelombang",
+   "judul": "Gelombang dan kedalaman perairan"
+  },
+  {
+   "id": "struktur",
+   "judul": "Struktur terapung berbasis drum dan sistem penambatan"
+  },
+  {
+   "id": "metode",
+   "judul": "Metode numerik"
+  },
+  {
+   "id": "umum",
+   "judul": "Rujukan umum yang ditambahkan untuk situs ini"
+  }
+ ],
+ "data_sumber": [
+  {
+   "judul": "Survei lapangan, batimetri, dan pengamatan pasang surut Desa Timbulsloko",
+   "keterangan": "Tim peneliti dan tim survei, 16 Juni – 2 Juli 2026. Diringkas dari naskah paper kajian lapangan tim dan laporan kemajuan penelitian.",
+   "status": "measured"
+  },
+  {
+   "judul": "ECMWF — data hindcast angin (u10, v10) dan gelombang (Hs, Tp, MWD) per jam, 2006–2025",
+   "keterangan": "Data sekunder; titik angin 6,91° LS 110,51° BT; titik gelombang 6,50° LS 110,00° BT. Produk ECMWF spesifik (mis. ERA5) perlu dikonfirmasi tim untuk atribusi.",
+   "status": "processed",
+   "url": "https://www.ecmwf.int/"
+  }
+ ],
+ "pustaka": [
+  {
+   "id": "sutrisno2025",
+   "kelompok": "subsidence",
+   "teks": "D. Sutrisno et al., “Rapid Evaluation of Coastal Sinking and Management Issues in Sayung, Central Java, Indonesia,” Geosciences, vol. 15, no. 12, Art. 455, 2025.",
+   "doi": "10.3390/geosciences15120455",
+   "verifikasi": "dicek"
+  },
+  {
+   "id": "azeriansyah2025",
+   "kelompok": "subsidence",
+   "teks": "R. Azeriansyah, K.-E. Ching, dan B. D. Yuwono, “Impact of Land Subsidence-Induced Three-Dimensional Surface Deformation on Infrastructure in the Semarang-Demak Alluvial Plain, Indonesia,” Journal of Earth and Marine Technology, vol. 5, no. 2, hlm. 111–122, 2025.",
+   "doi": "10.31284/j.jemt.2025.v5i2.6841",
+   "verifikasi": "dicek"
+  },
+  {
+   "id": "sidiq2021",
+   "kelompok": "subsidence",
+   "teks": "T. P. Sidiq, I. Gumilar, I. Meilano, H. Z. Abidin, H. Andreas, dan A. Permana, “Land Subsidence of Java North Coast Observed by SAR Interferometry,” IOP Conf. Ser.: Earth Environ. Sci., vol. 873, Art. 012078, 2021.",
+   "doi": "10.1088/1755-1315/873/1/012078",
+   "verifikasi": "dari_naskah"
+  },
+  {
+   "id": "sidiq2025",
+   "kelompok": "subsidence",
+   "teks": "T. P. Sidiq, I. Gumilar, H. Z. Abidin, I. Meilano, A. Purwarianti, dan R. Lestari, “Spatial Distribution and Monitoring of Land Subsidence Using Sentinel-1 SAR Data in Java, Indonesia,” Applied Sciences, vol. 15, no. 7, Art. 3732, 2025.",
+   "doi": "10.3390/app15073732",
+   "verifikasi": "dicek"
+  },
+  {
+   "id": "lo2022",
+   "kelompok": "subsidence",
+   "teks": "W. Lo, S. N. Purnomo, B. G. Dewanto, D. Sarah, dan Sumiyanto, “Integration of Numerical Models and InSAR Techniques to Assess Land Subsidence Due to Excessive Groundwater Abstraction in the Coastal and Lowland Regions of Semarang City,” Water, vol. 14, no. 2, Art. 201, 2022.",
+   "doi": "10.3390/w14020201",
+   "verifikasi": "dicek"
+  },
+  {
+   "id": "barnes2024",
+   "kelompok": "gelombang",
+   "teks": "A. T. Barnes et al., “Rising Sea Levels and the Increase of Shoreline Wave Energy at American Samoa,” Scientific Reports, vol. 14, Art. 5163, 2024.",
+   "doi": "10.1038/s41598-024-55636-y",
+   "verifikasi": "dicek"
+  },
+  {
+   "id": "afdholy2025",
+   "kelompok": "struktur",
+   "teks": "A. R. Afdholy, A. Yuniar, H. S. W. Sunarwadi, dan D. Rudhistiar, “Tipologi Pondasi Terapung pada Rumah Lanting di Kota Banjarmasin,” Pawon: Jurnal Arsitektur, vol. 9, no. 1, hlm. 165–180, 2025.",
+   "doi": "10.36040/pawon.v9i01.12937",
+   "verifikasi": "dari_naskah"
+  },
+  {
+   "id": "adi2020",
+   "kelompok": "struktur",
+   "teks": "H. P. Adi, S. I. Wahyudi, M. F. Ni’am, dan S. Haji, “An Analysis of Plastic Barrels as a Platforms Material of Floating House in Coastal Areas,” IOP Conf. Ser.: Earth Environ. Sci., vol. 498, Art. 012066, 2020.",
+   "doi": "10.1088/1755-1315/498/1/012066",
+   "verifikasi": "dicek"
+  },
+  {
+   "id": "syafutri2025",
+   "kelompok": "struktur",
+   "teks": "R. Syafutri dan M. Muyasarah, “Aplikasi Struktur Ponton Modular Berbasis Drum Plastik untuk Tambak Apung di Pontianak,” Journal of Architectural Design and Development, vol. 6, no. 1, hlm. 101–112, 2025.",
+   "doi": "10.37253/jad.v6i1.10487",
+   "verifikasi": "dari_naskah"
+  },
+  {
+   "id": "rildova2024",
+   "kelompok": "struktur",
+   "teks": "Rildova, E. C. Ilman, H. H. A. Barani, R. Efenddi, E. Susila, dan T. Taufikurahman, “Design and Construction of Community Based Floating Dock in Parit Island, Karimun District, Riau Islands, Indonesia,” Journal of Rural Development and Applied Technology, vol. 1, no. 2, hlm. 12–17, 2024.",
+   "doi": "10.5614/jrdat.2024.1.2.2",
+   "verifikasi": "dari_naskah"
+  },
+  {
+   "id": "freeman2022",
+   "kelompok": "struktur",
+   "teks": "E. L. Freeman, K. D. Splinter, R. J. Cox, dan F. Flocard, “Dynamic Motions of Piled Floating Pontoons Due to Boat Wake and Their Impact on Postural Stability and Safety,” Journal of Marine Science and Engineering, vol. 10, no. 11, Art. 1633, 2022.",
+   "doi": "10.3390/jmse10111633",
+   "verifikasi": "dicek"
+  },
+  {
+   "id": "ilman2024",
+   "kelompok": "metode",
+   "teks": "E. C. Ilman dan R. L. Tawekal, Metode Elemen Hingga: Dasar dalam Analisis Struktur. Jakad Media Publishing, 2024.",
+   "doi": null,
+   "verifikasi": "dari_naskah"
+  },
+  {
+   "id": "ilman2020",
+   "kelompok": "metode",
+   "teks": "E. Ilman, Y. Wang, A. J. Sobey, dan J. Wharton, “The Impact of Corrosion-Stress Interactions on the Topological Features and Ultimate Strength of Large-Scale Steel Structures,” Thin-Walled Structures, vol. 157, Art. 107104, 2020.",
+   "doi": "10.1016/j.tws.2020.107104",
+   "verifikasi": "dari_naskah"
+  },
+  {
+   "id": "naiborhu2025",
+   "kelompok": "metode",
+   "teks": "M. A. Naiborhu et al., “Model Setup Evaluation for Two-Dimensional Physical Model of Wave-Structure Interaction for Modular Floating Photovoltaic,” Sustainable Marine Structures, vol. 7, no. 4, hlm. 132–149, 2025.",
+   "doi": "10.36956/sms.v7i4.2719",
+   "verifikasi": "dari_naskah"
+  },
+  {
+   "id": "mccowan1894",
+   "kelompok": "umum",
+   "teks": "J. McCowan, “On the highest wave of permanent type,” Philosophical Magazine, Series 5, vol. 38, hlm. 351–358, 1894. Dipakai di situs hanya untuk ilustrasi batas atas tinggi gelombang pecah (H ≈ 0,78 d) pada halaman Visualisasi Risiko.",
+   "doi": null,
+   "verifikasi": "belum_dicek",
+   "catatan": "Ditambahkan oleh pengembang situs; mohon ditinjau peneliti."
+  },
+  {
+   "id": "usace-cem",
+   "kelompok": "umum",
+   "teks": "U.S. Army Corps of Engineers, Coastal Engineering Manual, EM 1110-2-1100, Part II (Coastal Hydrodynamics). Rujukan umum untuk transformasi gelombang di perairan dangkal dan indeks pecah gelombang.",
+   "doi": null,
+   "verifikasi": "belum_dicek",
+   "catatan": "Ditambahkan oleh pengembang situs; mohon ditinjau peneliti."
+  }
+ ]
+}
