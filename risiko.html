@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visualisasi risiko — Floating House</title>
+<meta name="description" content="Skenario perubahan kedalaman air di lokasi Madrasah Apung akibat penurunan tanah dan rangkaian mekanismenya terhadap gelombang dan struktur.">
+<meta name="theme-color" content="#0f2a3a">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/visualisasi.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#isi">Lewati ke isi</a>
+<header class="site-head">
+ <div class="wrap">
+  <div class="head-row">
+   <a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="7" fill="#0f2a3a"/><path d="M10 19 L20 11 L30 19 V24 H10 Z" fill="#fff"/><rect x="8" y="24" width="24" height="2.4" fill="#cfe6ea"/><circle cx="13" cy="29" r="3" fill="#2d5da8"/><circle cx="20" cy="29" r="3" fill="#2d5da8"/><circle cx="27" cy="29" r="3" fill="#2d5da8"/><path d="M4 30.5 q4 -2 8 0 t8 0 t8 0 t8 0" stroke="#8cc3cc" stroke-width="1.6" fill="none"/></svg><div><b>Floating House</b><span>Panduan Desain Rumah Apung Tahan Gelombang</span></div></a>
+   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-utama">Menu</button>
+  </div>
+  <nav class="site-nav" id="nav-utama" aria-label="Navigasi utama"><div class="nav-inner"><div class="nav-group"><p class="nav-group-label">Penelitian</p><ul><li><a href="mengenal.html">Masalah</a></li><li><a href="studi-kasus.html">Studi kasus</a></li><li><a href="data-lingkungan.html">Data lingkungan</a></li><li><a href="metodologi.html">Metodologi</a></li><li><a href="hasil-penelitian.html">Hasil</a></li><li><a href="risiko.html" aria-current="page">Risiko</a></li></ul></div><div class="nav-group"><p class="nav-group-label">Panduan</p><ul><li><a href="panduan-desain.html">Panduan desain</a></li><li><a href="kalkulator.html">Kalkulator</a></li><li><a href="pemeliharaan.html">Pemeliharaan</a></li></ul></div><div class="nav-group"><p class="nav-group-label">Info</p><ul><li><a href="tentang.html">Tentang</a></li><li><a href="referensi.html">Referensi</a></li></ul></div></div></nav>
+ </div>
+</header>
+<main id="isi">
+<section class="page-head"><div class="wrap"><p class="crumb"><a href="index.html">Beranda</a> / Visualisasi risiko</p><h1>Visualisasi risiko: dari penurunan tanah ke rumah apung</h1><p class="lead">Halaman ini menunjukkan mekanisme dan skenario, bukan peta risiko terhitung. Peta probabilitas kegagalan atau keamanan struktur belum dibuat karena hasil pemodelan belum tersedia.</p></div></section>
+<section class="section">
+ <div class="wrap">
+  <div class="section-intro"><h2>Rangkaian sebab-akibat</h2></div>
+  <ol class="chain h">
+   <li><b>Elevasi dasar turun</b><span>Menurut skenario laju penurunan tanah dari literatur. <span class="badge scenario" title="Status: Skenario">Skenario</span></span></li>
+   <li><b>Kedalaman relatif bertambah</b><span>Dihitung di bawah untuk lokasi madrasah. <span class="badge scenario" title="Status: Skenario">Skenario</span></span></li>
+   <li><b>Transformasi gelombang berubah</b><span>Lebih sedikit gelombang pecah sebelum mencapai bangunan. <span class="badge in_progress" title="Status: Sedang berjalan">Sedang berjalan</span></span></li>
+   <li><b>Gerak dan beban struktur berubah</b><span>Pada drum, rangka, sambungan, tali, dan tiang. <span class="badge in_progress" title="Status: Sedang berjalan">Sedang berjalan</span></span></li>
+   <li><b>Kebutuhan inspeksi atau perkuatan</b><span>Ditetapkan setelah analisis struktur. <span class="badge planned" title="Status: Direncanakan">Direncanakan</span></span></li>
+  </ol>
+ </div>
+</section>
+
+<section class="section alt">
+ <div class="wrap">
+  <h2>Skenario kedalaman air di lokasi madrasah, 0–10 tahun</h2>
+  <p class="prose">Grafik menunjukkan kedalaman air pada muka air terpilih jika dasar perairan turun dengan laju yang sama seperti penurunan tanah. Garis putus-putus menunjukkan batas atas teoretis tinggi gelombang individual sebelum pecah pada kedalaman itu (H ≈ γ × d, γ ≈ 0,78), sebagai ilustrasi bahwa perairan yang lebih dalam meloloskan gelombang yang lebih besar. Garis ini <strong>bukan</strong> tinggi gelombang di lokasi.</p>
+  <div class="chart">
+   <div class="chart-controls no-print">
+    <label>Muka air <select id="rk-wl"><option value="MLWS">MLWS (0,39 m)</option><option value="MSL" selected>MSL (0,60 m)</option><option value="MHWS">MHWS (0,81 m)</option><option value="HWS">HWS (1,14 m)</option></select></label>
+    <label>Elevasi dasar awal <select id="rk-bed"><option value="0.2">+0,2 m LWS</option><option value="-0.15" selected>−0,15 m LWS (tengah)</option><option value="-0.5">−0,5 m LWS</option></select></label>
+    <label><input type="checkbox" id="rk-hb" checked> Tampilkan batas gelombang pecah</label>
+   </div>
+   <div class="chart-box" id="chart-risiko"><p class="chart-empty">Grafik skenario memerlukan JavaScript.</p></div>
+   <ul class="chart-legend" id="chart-risiko-legend"></ul>
+  </div>
+  <div class="table-wrap" style="margin-top:1rem"><table id="tabel-risiko"><caption>Kedalaman air (m) pada tahun ke-0, 5, dan 10 <span class="badge scenario" title="Status: Skenario">Skenario</span></caption><thead><tr><th scope="col">Skenario</th><th scope="col" class="n">Tahun 0</th><th scope="col" class="n">Tahun 5</th><th scope="col" class="n">Tahun 10</th><th scope="col" class="n">Pertambahan relatif, tahun 10</th></tr></thead><tbody><tr><td colspan="5" class="muted">Tabel dihitung dari pilihan di atas.</td></tr></tbody></table></div>
+  <div class="grid g2" style="margin-top:1.2rem">
+   <div class="note limit"><b>Asumsi grafik</b>
+    <ul style="margin:0;padding-left:1.1rem">
+     <li>Dasar perairan turun sebesar penurunan tanah; muka laut tetap. Kenaikan muka laut akan menambah kedalaman.</li>
+     <li>Sedimentasi dan erosi diabaikan.</li>
+     <li>Laju dari literatur regional (lihat tabel di bawah), bukan pengukuran di desa.</li>
+     <li>γ = 0,78 adalah indeks pecah klasik untuk gelombang soliter (McCowan, 1894). Gelombang acak di perairan dangkal umumnya pecah pada rasio yang lebih kecil, dan dasar landai serta gesekan menambah disipasi.</li>
+    </ul></div>
+   <div class="note info"><b>Mengapa lokasi dangkal sensitif</b>Jika kedalaman awal hanya beberapa puluh sentimeter, tambahan 10 cm sudah merupakan perubahan relatif yang besar. Karena itu penelitian memperlakukan kedalaman sebagai parameter yang berubah terhadap waktu, dan akan menghitung gelombang di lokasi dengan model transformasi gelombang, bukan dengan rumus sederhana ini.</div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap">
+  <h2>Sumber skenario laju penurunan tanah</h2>
+  <p class="prose">Belum ada publikasi yang melaporkan pengukuran khusus di Desa Timbulsloko. Nilai Sayung (4,6–6 cm/tahun) adalah acuan terdekat secara geografis; 16,3 cm/tahun (Demak) dipakai penelitian sebagai skenario batas atas.</p>
+  <div class="table-wrap"><table id="tabel-subsidence">
+<caption>Laju penurunan muka tanah di sekitar Desa Timbulsloko <span class="badge literature" title="Status: Literatur">Literatur</span></caption>
+<thead><tr><th scope="col">Lokasi</th><th scope="col">Metode</th><th scope="col" class="n">Laju (cm/tahun)</th><th scope="col">Periode</th><th scope="col">Sumber</th></tr></thead>
+<tbody><tr class="hl"><td>Sayung, Demak</td><td>GPS dan InSAR terintegrasi</td><td class="n">6 ± 0,8</td><td>1977–2024</td><td><a href="referensi.html#sutrisno2025">Sutrisno et al. (2025)</a></td></tr><tr class="hl"><td>Sayung, Demak</td><td>DInSAR</td><td class="n">4,6</td><td>Tidak dinyatakan</td><td><a href="referensi.html#sutrisno2025">Sutrisno et al. (2025)</a></td></tr><tr><td>Pesisir Demak</td><td>Analisis multitemporal</td><td class="n">6</td><td>2011–2031</td><td><a href="referensi.html#sutrisno2025">Sutrisno et al. (2025)</a></td></tr><tr><td>Semarang dan Demak bagian barat</td><td>SBAS InSAR Sentinel-1</td><td class="n">12</td><td>2015–2024</td><td><a href="referensi.html#azeriansyah2025">Azeriansyah et al. (2025)</a></td></tr><tr><td>Demak bagian timur</td><td>SBAS InSAR Sentinel-1</td><td class="n">≈4</td><td>2015–2024</td><td><a href="referensi.html#azeriansyah2025">Azeriansyah et al. (2025)</a></td></tr><tr><td>Demak</td><td>SAR interferometry Sentinel-1</td><td class="n">8</td><td>2016–2020</td><td><a href="referensi.html#sidiq2021">Sidiq et al. (2021)</a></td></tr><tr class="hl"><td>Demak</td><td>SBAS InSAR Sentinel-1</td><td class="n">16,3</td><td>2017–2023</td><td><a href="referensi.html#sidiq2025">Sidiq et al. (2025)</a></td></tr><tr><td>Semarang, Demak, Pekalongan</td><td>Tidak dinyatakan spesifik</td><td class="n">5–15</td><td>Tidak dinyatakan</td><td><a href="referensi.html#sutrisno2025">Sutrisno et al. (2025)</a></td></tr><tr><td>Semarang timur laut dekat Demak</td><td>InSAR Sentinel-1</td><td class="n">8</td><td>2015–2020</td><td><a href="referensi.html#lo2022">Lo et al. (2022)</a></td></tr><tr><td>LIK Kaligawe, Semarang timur laut</td><td>Model numerik dikalibrasi InSAR dan GPS</td><td class="n">3,68</td><td>2020–2050</td><td><a href="referensi.html#lo2022">Lo et al. (2022)</a></td></tr></tbody></table></div>
+  <p class="source">Baris yang disorot dipakai sebagai skenario di situs ini. Disalin dari kompilasi literatur pada Naskah paper kajian lapangan tim (2026), Tabel 1; laporan kemajuan, Tabel 1.</p>
+ </div>
+</section>
+
+<section class="section alt">
+ <div class="wrap prose">
+  <h2>Yang akan ditampilkan setelah pemodelan selesai</h2>
+  <ul>
+   <li>Perubahan Hs dan Tp di lokasi madrasah antara kondisi eksisting dan proyeksi 10 tahun, per arah gelombang.</li>
+   <li>Perubahan gerak platform dan gaya pada tiang serta tali untuk kedua kondisi.</li>
+   <li>Komponen yang paling sensitif terhadap perubahan kedalaman.</li>
+  </ul>
+  <p>Butir-butir ini bersumber dari <code>hasil-model.json</code> dan akan muncul di halaman <a href="hasil-penelitian.html">Hasil &amp; status</a> setelah disetujui peneliti.</p>
+ </div>
+</section>
+
+</main>
+<footer class="site-foot">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div>
+    <h2>Floating House</h2>
+    <p>Situs diseminasi penelitian <i>Coupled Land Subsidence–Wave Modeling for Floating Houses: Analisis Respon Struktur dan Aplikasi Web Panduan Desain Rumah Apung Tahan Gelombang</i> (Penelitian Fundamental, Kemdiktisaintek, 2026).</p>
+    <p>Program Studi Teknik Kelautan, Institut Teknologi Bandung, bersama Politeknik Elektronika Negeri Surabaya. <span class="muted">[Identitas institusi dan logo menunggu konfirmasi ketua tim.]</span></p>
+   </div>
+   <div>
+    <h2>Penelitian</h2>
+    <ul><li><a href="studi-kasus.html">Studi kasus Timbulsloko</a></li><li><a href="data-lingkungan.html">Data lingkungan</a></li><li><a href="hasil-penelitian.html">Hasil &amp; status</a></li><li><a href="referensi.html">Referensi</a></li></ul>
+   </div>
+   <div>
+    <h2>Alat bantu</h2>
+    <ul><li><a href="panduan-desain.html">Panduan desain</a></li><li><a href="kalkulator.html">Kalkulator daya apung</a></li><li><a href="pemeliharaan.html">Daftar periksa inspeksi</a></li><li><a href="tentang.html">Tentang &amp; batas penggunaan</a></li></ul>
+   </div>
+  </div>
+  <p class="foot-note">Situs ini adalah sarana diseminasi penelitian dan alat bantu awal. Keluaran situs bukan desain teknik, bukan sertifikasi, dan bukan jaminan keselamatan. Hasil pemodelan gelombang, OrcaFlex, dan Abaqus belum final. Pembaruan konten terakhir: 21 Oktober 2026.</p>
+ </div>
+</footer>
+</body>
+</html>

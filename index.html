@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beranda — Floating House</title>
+<meta name="description" content="Penelitian dan panduan awal desain rumah apung tahan gelombang di pesisir yang mengalami penurunan muka tanah. Studi kasus Madrasah Apung Timbulsloko, Demak.">
+<meta name="theme-color" content="#0f2a3a">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/visualisasi.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#isi">Lewati ke isi</a>
+<header class="site-head">
+ <div class="wrap">
+  <div class="head-row">
+   <a class="brand" href="index.html" aria-current="page"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="7" fill="#0f2a3a"/><path d="M10 19 L20 11 L30 19 V24 H10 Z" fill="#fff"/><rect x="8" y="24" width="24" height="2.4" fill="#cfe6ea"/><circle cx="13" cy="29" r="3" fill="#2d5da8"/><circle cx="20" cy="29" r="3" fill="#2d5da8"/><circle cx="27" cy="29" r="3" fill="#2d5da8"/><path d="M4 30.5 q4 -2 8 0 t8 0 t8 0 t8 0" stroke="#8cc3cc" stroke-width="1.6" fill="none"/></svg><div><b>Floating House</b><span>Panduan Desain Rumah Apung Tahan Gelombang</span></div></a>
+   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-utama">Menu</button>
+  </div>
+  <nav class="site-nav" id="nav-utama" aria-label="Navigasi utama"><div class="nav-inner"><div class="nav-group"><p class="nav-group-label">Penelitian</p><ul><li><a href="mengenal.html">Masalah</a></li><li><a href="studi-kasus.html">Studi kasus</a></li><li><a href="data-lingkungan.html">Data lingkungan</a></li><li><a href="metodologi.html">Metodologi</a></li><li><a href="hasil-penelitian.html">Hasil</a></li><li><a href="risiko.html">Risiko</a></li></ul></div><div class="nav-group"><p class="nav-group-label">Panduan</p><ul><li><a href="panduan-desain.html">Panduan desain</a></li><li><a href="kalkulator.html">Kalkulator</a></li><li><a href="pemeliharaan.html">Pemeliharaan</a></li></ul></div><div class="nav-group"><p class="nav-group-label">Info</p><ul><li><a href="tentang.html">Tentang</a></li><li><a href="referensi.html">Referensi</a></li></ul></div></div></nav>
+ </div>
+</header>
+<main id="isi">
+
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <h1>Rumah apung untuk desa yang tanahnya terus turun</h1>
+   <p class="lead">Di Timbulsloko, Demak, bekas sawah, jalan, dan rumah kini berada di bawah air. Situs ini menyajikan penelitian tentang bagaimana penurunan muka tanah mengubah kedalaman air dan gelombang yang sampai ke rumah apung, serta apa yang perlu diperiksa saat membangun dan merawatnya.</p>
+   <div class="btn-row"><a class="btn" href="panduan-desain.html">Buka panduan desain</a><a class="btn ghost" href="kalkulator.html">Hitung daya apung drum</a></div>
+  </div>
+  
+<figure class="section-figure" id="penampang" aria-describedby="penampang-cap">
+ <div id="penampang-svg" class="chart-box">
+  <p class="chart-empty">Ilustrasi penampang membutuhkan JavaScript. Ringkasnya: di sekitar madrasah, dasar perairan berada sekitar +0,2 hingga −0,5 m terhadap LWS, sedangkan muka air berkisar 0 hingga 1,14 m di atas LWS. Kedalaman air di bawah bangunan karena itu berubah dari hampir nol sampai sekitar 1,6 m dalam siklus pasang surut.</p>
+ </div>
+ <div class="xs-controls no-print" id="penampang-ctrl" hidden>
+  <div><label for="xs-wl">Muka air: <output id="xs-wl-out">MSL</output></label>
+   <select id="xs-wl"><option value="LWS">LWS — surut terendah</option><option value="MLWS">MLWS</option><option value="MSL" selected>MSL — muka laut rata-rata</option><option value="MHWS">MHWS</option><option value="HWS">HWS — pasang tertinggi</option></select></div>
+  <div><label for="xs-bed">Elevasi dasar: <output id="xs-bed-out">−0,15 m LWS</output></label>
+   <input id="xs-bed" type="range" min="-0.5" max="0.2" step="0.05" value="-0.15" style="width:100%"></div>
+  <div><label for="xs-rate">Skenario penurunan</label>
+   <select id="xs-rate"><option value="4.6">4,6 cm/tahun (Sayung)</option><option value="6">6 cm/tahun (Sayung)</option><option value="16.3">16,3 cm/tahun (batas atas Demak)</option></select></div>
+  <div><label for="xs-yr">Tahun ke depan: <output id="xs-yr-out">0</output></label>
+   <input id="xs-yr" type="range" min="0" max="10" step="1" value="0" style="width:100%"></div>
+ </div>
+ <p class="xs-readout" id="xs-readout" aria-live="polite"></p>
+ <figcaption id="penampang-cap"><span class="badge processed" title="Status: Diolah">Datum pasut: diolah</span> <span class="badge processed" title="Status: Diolah">Dasar perairan: diolah</span> <span class="badge scenario" title="Status: Skenario">Skenario</span> Penampang skematis di sekitar Madrasah Apung. Datum dari analisis pasang surut 15 hari (Juni–Juli 2026); elevasi dasar dari survei batimetri. Penurunan dasar perairan diasumsikan sama dengan laju penurunan tanah dari literatur regional — bukan pengukuran di desa ini. Skala vertikal diperbesar.</figcaption>
+</figure>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap grid g-side">
+  <div class="prose">
+   <h2>Masalahnya: lantai yang tetap, air yang terus naik</h2>
+   <p>Pesisir utara Jawa mengalami penurunan muka tanah (<i>land subsidence</i>), yaitu turunnya permukaan tanah akibat pemadatan endapan muda, kondisi geologi, dan aktivitas manusia, terutama pengambilan air tanah. Ketika tanah turun, air laut menjadi lebih tinggi relatif terhadap daratan: genangan makin sering, lalu menetap.</p>
+   <p>Rumah yang lantainya tertumpu pada tanah kehilangan jarak aman terhadap air sedikit demi sedikit. Banyak rumah di Timbulsloko sudah ditinggikan berkali-kali atau ditinggalkan. Bangunan apung mengikuti muka air melalui gaya apung, sehingga jarak lantai ke air dapat dipertahankan, <em>asalkan</em> daya apung, stabilitas, kekuatan rangka, sambungan, dan sistem penahannya tetap memadai.</p>
+   <p>Penurunan tanah juga membuat perairan dangkal menjadi lebih dalam. Di perairan dangkal, kedalaman mengendalikan seberapa besar gelombang yang dapat mencapai bangunan. Kaitan inilah yang diteliti.</p>
+   <p><a href="mengenal.html">Pelajari lebih lanjut tentang penurunan tanah dan rumah apung</a></p>
+  </div>
+  <figure>
+   <img src="assets/images/lapangan/permukiman-tergenang.jpg" alt="Rumah-rumah bata beratap genteng berdiri di dalam genangan air laut setinggi dinding bawah" width="1136" height="849" loading="lazy">
+   <figcaption><span class="badge measured" title="Status: Terukur">Dokumentasi lapangan</span> Permukiman yang tergenang permanen di Desa Timbulsloko, Juni 2026. Foto: tim peneliti.</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="section alt">
+ <div class="wrap">
+  <div class="section-intro"><h2>Rantai yang diteliti</h2><p>Penelitian menghubungkan lima mata rantai yang biasanya dikaji terpisah. Setiap mata rantai memerlukan data dan model yang berbeda.</p></div>
+  <ol class="chain h">
+   <li><b>Penurunan muka tanah</b><span>Dasar perairan turun relatif terhadap muka air laut.</span></li>
+   <li><b>Kedalaman bertambah</b><span>Di lokasi yang sangat dangkal, perubahan kecil berarti perubahan kedalaman yang besar secara relatif.</span></li>
+   <li><b>Gelombang berubah</b><span>Lebih sedikit energi gelombang yang pecah sebelum mencapai bangunan.</span></li>
+   <li><b>Respons rumah apung</b><span>Gerak platform dan gaya pada drum, rangka, tali, dan tiang berubah.</span></li>
+   <li><b>Desain dan perawatan</b><span>Kriteria desain, perkuatan, dan inspeksi disusun dari hasil analisis.</span></li>
+  </ol>
+  <p class="source"><a href="metodologi.html">Lihat metodologi lengkap</a> · Hubungan kedalaman–energi gelombang didukung studi lapangan di American Samoa (Barnes et al., 2024); besarannya tidak dapat dipindahkan langsung ke Demak.</p>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap grid g-side">
+  <div>
+   <h2>Kondisi lapangan, singkatnya</h2>
+   <dl class="facts">
+    <div><dt>Bangunan</dt><dd><span class="v">2 modul</span>, sekitar 7 × 10 m dan 5 × 6 m <span class="badge measured" title="Status: Terukur">Terukur</span></dd></div>
+    <div><dt>Elemen apung</dt><dd>Drum plastik nominal <span class="v">200 L</span>, horizontal, ±120 buah pada modul besar <span class="badge processed" title="Status: Diolah">Estimasi visual</span></dd></div>
+    <div><dt>Kerusakan yang pernah terjadi</dt><dd>Tiang pemandu terlepas dan tali tambat putus <span class="badge reported" title="Status: Dilaporkan warga">Dilaporkan warga</span></dd></div>
+    <div><dt>Elevasi dasar di sekitar bangunan</dt><dd><span class="v">+0,2 s.d. −0,5 m LWS</span> <span class="badge processed" title="Status: Diolah">Diolah</span><br><span class="small muted">Elevasi terhadap datum LWS, bukan kedalaman air.</span></dd></div>
+    <div><dt>Pasang surut</dt><dd>Tunggang teramati <span class="v">88,6 cm</span> selama 15 hari; HWS–LWS <span class="v">1,14 m</span> <span class="badge measured" title="Status: Terukur">Terukur</span></dd></div>
+    <div><dt>Gelombang lepas pantai</dt><dd>Hs rata-rata <span class="v">0,427 m</span> (ECMWF 2006–2025) <span class="badge processed" title="Status: Diolah">Diolah</span><br><span class="small muted">Rata-rata di perairan lepas, bukan gelombang desain dan bukan kondisi di bangunan.</span></dd></div>
+   </dl>
+   <p class="source"><strong>Sumber:</strong> Naskah paper kajian lapangan tim (2026); survei 16 Juni – 2 Juli 2026.</p>
+   <p><a href="studi-kasus.html">Studi kasus lengkap</a> · <a href="data-lingkungan.html">Data lingkungan</a></p>
+  </div>
+  <figure>
+   <img src="assets/images/lapangan/madrasah-apung-tampak-samping.jpg" alt="Madrasah Apung berdinding hijau dengan deretan drum plastik biru di bawah lantai, mengapung di perairan keruh" width="880" height="495" loading="lazy">
+   <figcaption><span class="badge measured" title="Status: Terukur">Dokumentasi lapangan</span> Madrasah Apung Timbulsloko. Drum biru di bawah lantai adalah elemen apungnya. Foto: tim peneliti, Juni 2026.</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="section alt">
+ <div class="wrap">
+  <h2>Yang dapat Anda lakukan di situs ini</h2>
+  <ul class="feature-list">
+   <li class="tool"><a href="kalkulator.html">Menghitung daya apung drum</a><p>Perkiraan hidrostatik: kapasitas apung teoretis, sarat drum, dan kedalaman air pada pasang surut setempat. Rumus dan batasannya ditampilkan.</p></li>
+   <li class="tool"><a href="panduan-desain.html">Mengikuti panduan desain bertahap</a><p>Sepuluh hal yang perlu dipahami, dari survei lokasi sampai pemeliharaan, dengan pemisahan jelas antara prinsip umum dan temuan penelitian ini.</p></li>
+   <li class="tool"><a href="pemeliharaan.html">Memakai daftar periksa inspeksi</a><p>Formulir yang dapat diisi di ponsel atau dicetak, berdasarkan kerusakan yang benar-benar terjadi di Madrasah Apung.</p></li>
+   <li><a href="risiko.html">Melihat skenario perubahan kedalaman</a><p>Bagaimana kedalaman air di lokasi berubah dalam 10 tahun untuk beberapa laju penurunan tanah dari literatur.</p></li>
+   <li><a href="data-lingkungan.html">Menelusuri data lingkungan</a><p>Rekaman pasang surut jam-jaman, batimetri, serta iklim angin dan gelombang 20 tahun.</p></li>
+   <li><a href="hasil-penelitian.html">Mengikuti status penelitian</a><p>Apa yang sudah selesai, apa yang masih hasil awal, dan apa yang sedang dikerjakan.</p></li>
+  </ul>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap">
+  <div class="section-intro"><h2>Status penelitian</h2><p>Survei lapangan dan pengolahan data lingkungan telah selesai. Pemodelan transformasi gelombang masih dilanjutkan, model global OrcaFlex sedang dikembangkan, dan analisis detail dengan Abaqus akan memakai hasil model global. Kapasitas desain, beban aman, kekuatan sambungan, dan ketahanan fatigue <strong>belum tersedia</strong>.</p></div>
+  <div id="status-ringkas" data-render="status-ringkas"></div>
+  <p><a href="hasil-penelitian.html">Rincian hasil dan status</a></p>
+ </div>
+</section>
+
+</main>
+<footer class="site-foot">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div>
+    <h2>Floating House</h2>
+    <p>Situs diseminasi penelitian <i>Coupled Land Subsidence–Wave Modeling for Floating Houses: Analisis Respon Struktur dan Aplikasi Web Panduan Desain Rumah Apung Tahan Gelombang</i> (Penelitian Fundamental, Kemdiktisaintek, 2026).</p>
+    <p>Program Studi Teknik Kelautan, Institut Teknologi Bandung, bersama Politeknik Elektronika Negeri Surabaya. <span class="muted">[Identitas institusi dan logo menunggu konfirmasi ketua tim.]</span></p>
+   </div>
+   <div>
+    <h2>Penelitian</h2>
+    <ul><li><a href="studi-kasus.html">Studi kasus Timbulsloko</a></li><li><a href="data-lingkungan.html">Data lingkungan</a></li><li><a href="hasil-penelitian.html">Hasil &amp; status</a></li><li><a href="referensi.html">Referensi</a></li></ul>
+   </div>
+   <div>
+    <h2>Alat bantu</h2>
+    <ul><li><a href="panduan-desain.html">Panduan desain</a></li><li><a href="kalkulator.html">Kalkulator daya apung</a></li><li><a href="pemeliharaan.html">Daftar periksa inspeksi</a></li><li><a href="tentang.html">Tentang &amp; batas penggunaan</a></li></ul>
+   </div>
+  </div>
+  <p class="foot-note">Situs ini adalah sarana diseminasi penelitian dan alat bantu awal. Keluaran situs bukan desain teknik, bukan sertifikasi, dan bukan jaminan keselamatan. Hasil pemodelan gelombang, OrcaFlex, dan Abaqus belum final. Pembaruan konten terakhir: 21 Oktober 2026.</p>
+ </div>
+</footer>
+</body>
+</html>

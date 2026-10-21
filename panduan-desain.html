@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panduan desain — Floating House</title>
+<meta name="description" content="Panduan bertahap memahami desain rumah apung berbasis drum: survei lokasi, daya apung, rangka, sambungan, tiang penahan, gelombang, stabilitas, material, dan pemeliharaan.">
+<meta name="theme-color" content="#0f2a3a">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#isi">Lewati ke isi</a>
+<header class="site-head">
+ <div class="wrap">
+  <div class="head-row">
+   <a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="7" fill="#0f2a3a"/><path d="M10 19 L20 11 L30 19 V24 H10 Z" fill="#fff"/><rect x="8" y="24" width="24" height="2.4" fill="#cfe6ea"/><circle cx="13" cy="29" r="3" fill="#2d5da8"/><circle cx="20" cy="29" r="3" fill="#2d5da8"/><circle cx="27" cy="29" r="3" fill="#2d5da8"/><path d="M4 30.5 q4 -2 8 0 t8 0 t8 0 t8 0" stroke="#8cc3cc" stroke-width="1.6" fill="none"/></svg><div><b>Floating House</b><span>Panduan Desain Rumah Apung Tahan Gelombang</span></div></a>
+   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-utama">Menu</button>
+  </div>
+  <nav class="site-nav" id="nav-utama" aria-label="Navigasi utama"><div class="nav-inner"><div class="nav-group"><p class="nav-group-label">Penelitian</p><ul><li><a href="mengenal.html">Masalah</a></li><li><a href="studi-kasus.html">Studi kasus</a></li><li><a href="data-lingkungan.html">Data lingkungan</a></li><li><a href="metodologi.html">Metodologi</a></li><li><a href="hasil-penelitian.html">Hasil</a></li><li><a href="risiko.html">Risiko</a></li></ul></div><div class="nav-group"><p class="nav-group-label">Panduan</p><ul><li><a href="panduan-desain.html" aria-current="page">Panduan desain</a></li><li><a href="kalkulator.html">Kalkulator</a></li><li><a href="pemeliharaan.html">Pemeliharaan</a></li></ul></div><div class="nav-group"><p class="nav-group-label">Info</p><ul><li><a href="tentang.html">Tentang</a></li><li><a href="referensi.html">Referensi</a></li></ul></div></div></nav>
+ </div>
+</header>
+<main id="isi">
+<section class="page-head"><div class="wrap"><p class="crumb"><a href="index.html">Beranda</a> / Panduan desain</p><h1>Panduan desain rumah apung</h1><p class="lead">Sepuluh hal yang perlu dipahami sebelum membangun atau memperbaiki rumah apung berbasis drum. Panduan ini membantu memahami apa yang perlu diperiksa; panduan ini belum berisi ukuran atau spesifikasi desain final.</p></div></section>
+<section class="section">
+ <div class="wrap">
+  <div class="note limit"><b>Panduan awal, bukan spesifikasi</b>Situs ini tidak menetapkan ukuran kayu, jumlah drum minimum, ukuran tiang, faktor keamanan, atau detail sambungan final. Nilai tersebut menunggu hasil pemodelan gelombang, OrcaFlex, dan Abaqus yang tervalidasi, lalu akan diterbitkan dalam buku petunjuk teknis.</div>
+  <p class="prose">Setiap topik dibagi tiga kolom: <strong>prinsip umum</strong> yang berlaku untuk struktur terapung, <strong>temuan penelitian ini</strong> dari Madrasah Apung Timbulsloko, dan <strong>hal yang menunggu hasil</strong> analisis.</p>
+  <h2 style="font-size:1.1rem">Daftar topik</h2>
+  <ol class="toc"><li><a href="#survei">Survei lokasi dan muka air</a></li><li><a href="#tipe">Tipe struktur terapung</a></li><li><a href="#volume">Volume dan susunan elemen apung</a></li><li><a href="#rangka">Rangka bawah dan distribusi beban</a></li><li><a href="#sambungan">Sambungan drum–rangka</a></li><li><a href="#penahan">Tiang penahan dan tambat</a></li><li><a href="#gelombang">Kedalaman dan gelombang</a></li><li><a href="#stabilitas">Stabilitas dan freeboard</a></li><li><a href="#material">Perlindungan material</a></li><li><a href="#pemeliharaan">Inspeksi dan pemeliharaan</a></li></ol>
+ </div>
+</section>
+<section class="section alt" style="padding-top:0">
+ <div class="wrap">
+  <article class="guide-step" id="survei">
+ <div class="step-n" aria-hidden="true">1</div>
+ <div>
+  <h2>Survei kondisi lokasi dan muka air</h2>
+  
+  <div class="guide-cols">
+   <div><h4><span class="badge general" title="Status: Rekomendasi umum">Prinsip umum</span></h4><ul><li>Ketahui elevasi dasar perairan dan muka air terhadap satu datum yang sama.</li><li>Ingat bahwa kedalaman air = elevasi muka air − elevasi dasar; kedalaman berubah sepanjang hari.</li><li>Rekaman pasang surut yang lebih panjang memberi gambaran yang lebih representatif.</li><li>Catat akses ke lokasi: material dan alat mungkin hanya bisa diangkut perahu kecil.</li></ul></div>
+   <div><h4><span class="badge processed" title="Status: Diolah">Temuan penelitian ini</span></h4><ul><li>Di sekitar Madrasah Apung, dasar berada sekitar +0,2 s.d. −0,5 m LWS; kedalaman air berkisar dari hampir nol sampai ± 1,6 m dalam siklus pasang surut.</li><li>Paper merekomendasikan rekaman muka air yang mencakup kedua musim monsun, penyelidikan tanah dasar untuk jepitan tiang, dan pengukuran gerak platform.</li></ul></div>
+   <div><h4><span class="badge in_progress" title="Status: Sedang berjalan">Menunggu hasil</span></h4><ul><li>Kondisi gelombang di lokasi untuk kondisi eksisting dan proyeksi 10 tahun.</li></ul></div>
+  </div>
+ </div>
+</article><article class="guide-step" id="tipe">
+ <div class="step-n" aria-hidden="true">2</div>
+ <div>
+  <h2>Pemilihan tipe struktur terapung</h2>
+  
+  <div class="guide-cols">
+   <div><h4><span class="badge general" title="Status: Rekomendasi umum">Prinsip umum</span></h4><ul><li>Literatur mengenal elemen apung dari kayu gelondongan, bambu, drum, ponton baja, dan kombinasinya.</li><li>Pilihan dipengaruhi ketersediaan material, kemampuan merawat, ketahanan terhadap air laut, dan kondisi gelombang.</li></ul></div>
+   <div><h4><span class="badge processed" title="Status: Diolah">Temuan penelitian ini</span></h4><ul><li>Drum plastik dipilih warga karena murah, mudah diperoleh, ringan, modular, dan dapat diganti satu per satu.</li></ul></div>
+   <div><h4><span class="badge in_progress" title="Status: Sedang berjalan">Menunggu hasil</span></h4><ul><li>Batas kondisi lingkungan yang masih dapat diterima konfigurasi drum–kayu.</li></ul></div>
+  </div>
+ </div>
+</article><article class="guide-step" id="volume">
+ <div class="step-n" aria-hidden="true">3</div>
+ <div>
+  <h2>Volume dan susunan elemen apung</h2>
+  <p><a class="btn small" href="kalkulator.html">Hitung dengan kalkulator</a></p>
+  <div class="guide-cols">
+   <div><h4><span class="badge general" title="Status: Rekomendasi umum">Prinsip umum</span></h4><ul><li>Gaya apung maksimum satu drum ≈ massa jenis air × gravitasi × volume luar drum.</li><li>Bangunan harus mengapung dengan cadangan daya apung: jangan memakai seluruh volume drum.</li><li>Bobot drum dan rangka bawah ikut menjadi beban.</li><li>Jumlah drum bukan satu-satunya faktor: posisi, orientasi, jarak antardrum, dan rangka juga menentukan perilaku platform.</li></ul></div>
+   <div><h4><span class="badge processed" title="Status: Diolah">Temuan penelitian ini</span></h4><ul><li>Madrasah Apung memakai drum 200 L (Ø 581 × 890 mm) horizontal, ± 120 buah pada modul 7 × 10 m (estimasi visual).</li></ul></div>
+   <div><h4><span class="badge in_progress" title="Status: Sedang berjalan">Menunggu hasil</span></h4><ul><li>Kriteria jumlah dan pemilihan elemen apung.</li><li>Cadangan daya apung minimum yang disarankan.</li></ul></div>
+  </div>
+ </div>
+</article><article class="guide-step" id="rangka">
+ <div class="step-n" aria-hidden="true">4</div>
+ <div>
+  <h2>Konfigurasi rangka bawah dan distribusi beban</h2>
+  <figure class="section-figure" style="margin-bottom:1rem"><svg viewBox="0 0 640 170" role="img" aria-labelledby="lp-t lp-d">
+<title id="lp-t">Jalur beban pada rumah apung</title>
+<desc id="lp-d">Beban vertikal mengalir dari atap dan dinding ke lantai, rangka bawah, sambungan drum, lalu drum dan gaya apung. Beban horizontal dari angin, arus, dan gelombang mengalir dari platform ke sambungan tali, tali, tiang pemandu, lalu tanah dasar.</desc>
+<g font-family="inherit" font-size="12" fill="#0f2a3a">
+<text x="0" y="16" font-weight="700">Beban vertikal</text>
+<g>
+<rect x="0" y="26" width="100" height="40" rx="5" fill="#fff" stroke="#33505f"/><text x="50" y="50" text-anchor="middle">atap, dinding</text>
+<rect x="128" y="26" width="100" height="40" rx="5" fill="#fff" stroke="#33505f"/><text x="178" y="44" text-anchor="middle">lantai,</text><text x="178" y="58" text-anchor="middle">penghuni</text>
+<rect x="256" y="26" width="100" height="40" rx="5" fill="#fff" stroke="#33505f"/><text x="306" y="50" text-anchor="middle">rangka bawah</text>
+<rect x="384" y="26" width="110" height="40" rx="5" fill="#fbf6ec" stroke="#9a6412" stroke-width="2"/><text x="439" y="44" text-anchor="middle">sambungan</text><text x="439" y="58" text-anchor="middle">drum–rangka</text>
+<rect x="522" y="26" width="118" height="40" rx="5" fill="#2d5da8"/><text x="581" y="44" text-anchor="middle" fill="#fff">drum →</text><text x="581" y="58" text-anchor="middle" fill="#fff">gaya apung</text>
+</g>
+<text x="0" y="104" font-weight="700">Beban horizontal (angin, arus, gelombang)</text>
+<rect x="0" y="114" width="100" height="40" rx="5" fill="#fff" stroke="#33505f"/><text x="50" y="138" text-anchor="middle">platform</text>
+<rect x="128" y="114" width="100" height="40" rx="5" fill="#fbf6ec" stroke="#9a6412" stroke-width="2"/><text x="178" y="132" text-anchor="middle">titik ikat</text><text x="178" y="146" text-anchor="middle">tali</text>
+<rect x="256" y="114" width="100" height="40" rx="5" fill="#fbf6ec" stroke="#9a6412" stroke-width="2"/><text x="306" y="138" text-anchor="middle">tali tambat</text>
+<rect x="384" y="114" width="110" height="40" rx="5" fill="#fff" stroke="#33505f"/><text x="439" y="132" text-anchor="middle">tiang pemandu</text><text x="439" y="146" text-anchor="middle">+ selongsong</text>
+<rect x="522" y="114" width="118" height="40" rx="5" fill="#fbf6ec" stroke="#9a6412" stroke-width="2"/><text x="581" y="132" text-anchor="middle">jepitan tiang</text><text x="581" y="146" text-anchor="middle">di tanah lunak</text>
+<g stroke="#17707a" stroke-width="2"><line x1="102" y1="46" x2="126" y2="46"/><line x1="230" y1="46" x2="254" y2="46"/><line x1="358" y1="46" x2="382" y2="46"/><line x1="496" y1="46" x2="520" y2="46"/><line x1="102" y1="134" x2="126" y2="134"/><line x1="230" y1="134" x2="254" y2="134"/><line x1="358" y1="134" x2="382" y2="134"/><line x1="496" y1="134" x2="520" y2="134"/></g>
+</g></svg><figcaption><span class="badge general" title="Status: Rekomendasi umum">Rekomendasi umum</span> Jalur beban. Kotak bergaris amber adalah titik yang dilaporkan bermasalah atau diidentifikasi kritis dari temuan lapangan.</figcaption></figure>
+  <div class="guide-cols">
+   <div><h4><span class="badge general" title="Status: Rekomendasi umum">Prinsip umum</span></h4><ul><li>Rangka menyalurkan beban lantai, dinding, atap, penghuni, dan perabot ke drum.</li><li>Balok keliling mengikat susunan menjadi satu platform; batang melintang dan diagonal menjaga bentuk terhadap gaya lateral dan puntir.</li><li>Usahakan beban tersebar merata agar platform tidak miring dan drum tidak terbebani berlebihan di satu sisi.</li></ul></div>
+   <div><h4><span class="badge processed" title="Status: Diolah">Temuan penelitian ini</span></h4><ul><li>Rangka kayu memanjang dan melintang dengan diagonal dan penahan lokal di beberapa lokasi.</li><li>Rekomendasi paper: tambahkan batang keliling dan diagonal yang belum ada, jaga jarak drum tetap teratur.</li></ul></div>
+   <div><h4><span class="badge in_progress" title="Status: Sedang berjalan">Menunggu hasil</span></h4><ul><li>Ukuran penampang dan jarak balok yang direkomendasikan.</li><li>Konfigurasi rangka hasil analisis FEA.</li></ul></div>
+  </div>
+ </div>
+</article><article class="guide-step" id="sambungan">
+ <div class="step-n" aria-hidden="true">5</div>
+ <div>
+  <h2>Sambungan elemen apung dengan rangka</h2>
+  
+  <div class="guide-cols">
+   <div><h4><span class="badge general" title="Status: Rekomendasi umum">Prinsip umum</span></h4><ul><li>Sambungan adalah titik pertemuan gaya apung drum dan beban rangka.</li><li>Ikatan tali sederhana dan mudah diganti, tetapi dapat bergeser, kendur, dan aus.</li><li>Penjepit menahan drum lebih baik, tetapi memusatkan gaya pada bagian kayu tertentu.</li></ul></div>
+   <div><h4><span class="badge processed" title="Status: Diolah">Temuan penelitian ini</span></h4><ul><li>Rekomendasi paper: sebarkan penahan pada panjang tumpuan yang lebih panjang agar tegangan lokal tidak terpusat di satu titik.</li></ul></div>
+   <div><h4><span class="badge in_progress" title="Status: Sedang berjalan">Menunggu hasil</span></h4><ul><li>Detail sambungan drum–rangka yang diverifikasi dengan FEA.</li><li>Perbandingan konfigurasi sambungan terhadap beban berulang (fatigue).</li></ul></div>
+  </div>
+ </div>
+</article><article class="guide-step" id="penahan">
+ <div class="step-n" aria-hidden="true">6</div>
+ <div>
+  <h2>Sistem tiang penahan atau tambat</h2>
+  
+  <div class="guide-cols">
+   <div><h4><span class="badge general" title="Status: Rekomendasi umum">Prinsip umum</span></h4><ul><li>Tiang pemandu membiarkan platform naik-turun tetapi membatasi gerak horizontal.</li><li>Interaksi platform–tiang tidak sepenuhnya kaku: celah, gesekan, dan benturan dapat menimbulkan beban puncak lokal.</li><li>Sistem penahan adalah bagian dari struktur, bukan aksesori.</li></ul></div>
+   <div><h4><span class="badge processed" title="Status: Diolah">Temuan penelitian ini</span></h4><ul><li>Kerusakan yang dilaporkan: tiang terlepas dan tali putus. Kegagalan terjadi pada komponen terlemah, bukan pada pipa bergrout.</li><li>Rekomendasi paper: tambah kedalaman pancang di tanah lunak; beri sambungan mekanis antara tiang kayu dan selongsong PVC, jangan hanya mengandalkan grout; buat titik ikat di platform agar tali mudah diganti dan arah tarikannya tidak berubah tajam saat platform naik-turun.</li></ul></div>
+   <div><h4><span class="badge in_progress" title="Status: Sedang berjalan">Menunggu hasil</span></h4><ul><li>Gaya pada tiang dan tali dari model OrcaFlex.</li><li>Kriteria tiang dan jepitan dari model interaksi tiang–tanah.</li></ul></div>
+  </div>
+ </div>
+</article><article class="guide-step" id="gelombang">
+ <div class="step-n" aria-hidden="true">7</div>
+ <div>
+  <h2>Pertimbangan kedalaman dan gelombang</h2>
+  <p><a class="btn small ghost" href="risiko.html">Lihat skenario kedalaman</a></p>
+  <div class="guide-cols">
+   <div><h4><span class="badge general" title="Status: Rekomendasi umum">Prinsip umum</span></h4><ul><li>Di perairan dangkal, kedalaman membatasi tinggi gelombang yang dapat mencapai bangunan.</li><li>Jika dasar perairan turun, perairan bertambah dalam dan lebih banyak energi gelombang dapat lolos.</li><li>Gelombang lepas pantai tidak boleh dipakai langsung untuk lokasi dekat pantai tanpa analisis transformasi.</li></ul></div>
+   <div><h4><span class="badge processed" title="Status: Diolah">Temuan penelitian ini</span></h4><ul><li>Lokasi sangat dangkal sehingga perubahan elevasi dasar yang kecil menghasilkan perubahan kedalaman yang besar secara relatif.</li><li>Gelombang lepas pantai dominan dari barat laut pada Desember–Februari dan dari timur–timur laut pada pertengahan tahun.</li></ul></div>
+   <div><h4><span class="badge in_progress" title="Status: Sedang berjalan">Menunggu hasil</span></h4><ul><li>Besarnya perubahan gelombang di lokasi akibat penurunan tanah.</li></ul></div>
+  </div>
+ </div>
+</article><article class="guide-step" id="stabilitas">
+ <div class="step-n" aria-hidden="true">8</div>
+ <div>
+  <h2>Stabilitas dan freeboard</h2>
+  
+  <div class="guide-cols">
+   <div><h4><span class="badge general" title="Status: Rekomendasi umum">Prinsip umum</span></h4><ul><li>Freeboard adalah jarak dari muka air ke lantai atau ke tepi atas elemen apung.</li><li>Stabilitas bergantung pada lebar platform, letak titik berat, dan distribusi beban. Platform yang lebih lebar umumnya lebih stabil terhadap kemiringan.</li><li>Hindari menumpuk beban berat di satu sisi; perhatikan beban saat banyak orang berkumpul di tepi.</li></ul></div>
+   <div><h4><span class="badge processed" title="Status: Diolah">Temuan penelitian ini</span></h4><ul><li>Belum ada pengukuran freeboard dan kemiringan di Madrasah Apung.</li></ul></div>
+   <div><h4><span class="badge in_progress" title="Status: Sedang berjalan">Menunggu hasil</span></h4><ul><li>Batas freeboard minimum.</li><li>Pemeriksaan stabilitas untuk konfigurasi tipikal.</li></ul></div>
+  </div>
+ </div>
+</article><article class="guide-step" id="material">
+ <div class="step-n" aria-hidden="true">9</div>
+ <div>
+  <h2>Perlindungan material di lingkungan laut</h2>
+  
+  <div class="guide-cols">
+   <div><h4><span class="badge general" title="Status: Rekomendasi umum">Prinsip umum</span></h4><ul><li>Kayu di zona pasang surut mengalami siklus basah–kering yang mempercepat pelapukan.</li><li>Tali sintetis aus karena gesekan berulang dan paparan sinar matahari.</li><li>Komponen logam (baut, klem) rentan korosi di air asin.</li></ul></div>
+   <div><h4><span class="badge processed" title="Status: Diolah">Temuan penelitian ini</span></h4><ul><li>Keausan tali terjadi karena gerak relatif berulang terhadap tepi keras. Rekomendasi paper: pasang pelindung gesek atau selongsong halus di setiap titik kontak tali, hindari belokan tajam, dan perlakukan tali sebagai komponen habis pakai yang diganti berkala.</li></ul></div>
+   <div><h4><span class="badge in_progress" title="Status: Sedang berjalan">Menunggu hasil</span></h4><ul><li>Kriteria perlindungan korosi/degradasi material (perlu konfirmasi apakah tahap ini tetap dilaksanakan).</li></ul></div>
+  </div>
+ </div>
+</article><article class="guide-step" id="pemeliharaan">
+ <div class="step-n" aria-hidden="true">10</div>
+ <div>
+  <h2>Inspeksi dan pemeliharaan berkala</h2>
+  <p><a class="btn small" href="pemeliharaan.html">Buka daftar periksa</a></p>
+  <div class="guide-cols">
+   <div><h4><span class="badge general" title="Status: Rekomendasi umum">Prinsip umum</span></h4><ul><li>Inspeksi rutin sederhana dapat menemukan kerusakan sebelum menjadi kegagalan.</li><li>Catatan inspeksi tertulis membangun riwayat layanan yang berguna bagi warga dan insinyur pendamping.</li></ul></div>
+   <div><h4><span class="badge processed" title="Status: Diolah">Temuan penelitian ini</span></h4><ul><li>Paper mengusulkan empat rutinitas berbasis kerusakan yang terjadi: cek tali bulanan, cek posisi tiang setelah angin kencang atau pasang tinggi, cek bagian bawah saat surut setiap tiga bulan, dan buku catatan inspeksi.</li></ul></div>
+   <div><h4><span class="badge in_progress" title="Status: Sedang berjalan">Menunggu hasil</span></h4><ul><li>Interval inspeksi berbasis analisis fatigue/risiko.</li></ul></div>
+  </div>
+ </div>
+</article>
+  <p class="source"><strong>Sumber:</strong> Naskah paper kajian lapangan tim (2026), bagian 1 dan 4; Laporan kemajuan penelitian (Agustus 2026), bagian C.1 dan G. Prinsip umum dirangkum dari literatur dalam halaman Referensi (Adi et al. 2020; Syafutri &amp; Muyasarah 2025; Rildova et al. 2024; Freeman et al. 2022; Afdholy et al. 2025).</p>
+ </div>
+</section>
+
+</main>
+<footer class="site-foot">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div>
+    <h2>Floating House</h2>
+    <p>Situs diseminasi penelitian <i>Coupled Land Subsidence–Wave Modeling for Floating Houses: Analisis Respon Struktur dan Aplikasi Web Panduan Desain Rumah Apung Tahan Gelombang</i> (Penelitian Fundamental, Kemdiktisaintek, 2026).</p>
+    <p>Program Studi Teknik Kelautan, Institut Teknologi Bandung, bersama Politeknik Elektronika Negeri Surabaya. <span class="muted">[Identitas institusi dan logo menunggu konfirmasi ketua tim.]</span></p>
+   </div>
+   <div>
+    <h2>Penelitian</h2>
+    <ul><li><a href="studi-kasus.html">Studi kasus Timbulsloko</a></li><li><a href="data-lingkungan.html">Data lingkungan</a></li><li><a href="hasil-penelitian.html">Hasil &amp; status</a></li><li><a href="referensi.html">Referensi</a></li></ul>
+   </div>
+   <div>
+    <h2>Alat bantu</h2>
+    <ul><li><a href="panduan-desain.html">Panduan desain</a></li><li><a href="kalkulator.html">Kalkulator daya apung</a></li><li><a href="pemeliharaan.html">Daftar periksa inspeksi</a></li><li><a href="tentang.html">Tentang &amp; batas penggunaan</a></li></ul>
+   </div>
+  </div>
+  <p class="foot-note">Situs ini adalah sarana diseminasi penelitian dan alat bantu awal. Keluaran situs bukan desain teknik, bukan sertifikasi, dan bukan jaminan keselamatan. Hasil pemodelan gelombang, OrcaFlex, dan Abaqus belum final. Pembaruan konten terakhir: 21 Oktober 2026.</p>
+ </div>
+</footer>
+</body>
+</html>

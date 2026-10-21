@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalkulator daya apung — Floating House</title>
+<meta name="description" content="Kalkulator hidrostatik untuk rumah apung berbasis drum: kapasitas apung teoretis, sarat drum, freeboard, dan kedalaman air pada pasang surut Timbulsloko, dengan rumus dan batasan yang terlihat.">
+<meta name="theme-color" content="#0f2a3a">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/kalkulator.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#isi">Lewati ke isi</a>
+<header class="site-head">
+ <div class="wrap">
+  <div class="head-row">
+   <a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="7" fill="#0f2a3a"/><path d="M10 19 L20 11 L30 19 V24 H10 Z" fill="#fff"/><rect x="8" y="24" width="24" height="2.4" fill="#cfe6ea"/><circle cx="13" cy="29" r="3" fill="#2d5da8"/><circle cx="20" cy="29" r="3" fill="#2d5da8"/><circle cx="27" cy="29" r="3" fill="#2d5da8"/><path d="M4 30.5 q4 -2 8 0 t8 0 t8 0 t8 0" stroke="#8cc3cc" stroke-width="1.6" fill="none"/></svg><div><b>Floating House</b><span>Panduan Desain Rumah Apung Tahan Gelombang</span></div></a>
+   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-utama">Menu</button>
+  </div>
+  <nav class="site-nav" id="nav-utama" aria-label="Navigasi utama"><div class="nav-inner"><div class="nav-group"><p class="nav-group-label">Penelitian</p><ul><li><a href="mengenal.html">Masalah</a></li><li><a href="studi-kasus.html">Studi kasus</a></li><li><a href="data-lingkungan.html">Data lingkungan</a></li><li><a href="metodologi.html">Metodologi</a></li><li><a href="hasil-penelitian.html">Hasil</a></li><li><a href="risiko.html">Risiko</a></li></ul></div><div class="nav-group"><p class="nav-group-label">Panduan</p><ul><li><a href="panduan-desain.html">Panduan desain</a></li><li><a href="kalkulator.html" aria-current="page">Kalkulator</a></li><li><a href="pemeliharaan.html">Pemeliharaan</a></li></ul></div><div class="nav-group"><p class="nav-group-label">Info</p><ul><li><a href="tentang.html">Tentang</a></li><li><a href="referensi.html">Referensi</a></li></ul></div></div></nav>
+ </div>
+</header>
+<main id="isi">
+<section class="page-head"><div class="wrap"><p class="crumb"><a href="index.html">Beranda</a> / Kalkulator</p><h1>Kalkulator daya apung awal</h1><p class="lead">Perkiraan hidrostatik untuk platform yang ditopang drum horizontal: berapa beban yang ditanggung, berapa kapasitas apung teoretis, seberapa dalam drum terendam, dan berapa kedalaman air di lokasi pada pasang surut tertentu.</p></div></section>
+<section class="section">
+ <div class="wrap">
+  <div class="note warn"><b>Bacalah sebelum memakai</b>Kalkulator ini hanya menghitung keseimbangan gaya apung dalam air tenang dengan beban tersebar merata. Kalkulator tidak memeriksa stabilitas, gelombang, kekuatan rangka, sambungan, tiang, atau tali. Hasilnya bukan desain dan bukan pernyataan bahwa bangunan aman.</div>
+  <noscript><div class="note warn"><b>JavaScript diperlukan</b>Kalkulator memerlukan JavaScript. Rumus lengkap tetap tersedia di bagian bawah halaman.</div></noscript>
+  <div class="calc-layout">
+   <form id="calc" novalidate>
+    <fieldset>
+     <legend>1. Ukuran platform</legend>
+     <div class="row2">
+      <div class="field"><label for="L">Panjang</label><span class="hint">Sisi terpanjang denah lantai</span><div class="with-unit"><input id="L" name="L" type="text" autocomplete="off" inputmode="decimal" step="any" min="0" required><span>m</span></div></div>
+      <div class="field"><label for="Bw">Lebar</label><span class="hint">Sisi pendek denah lantai</span><div class="with-unit"><input id="Bw" name="Bw" type="text" autocomplete="off" inputmode="decimal" step="any" min="0" required><span>m</span></div></div>
+     </div>
+     <p class="small"><button type="button" class="btn small ghost" id="isi-contoh">Isi geometri Madrasah Apung Bangunan 1</button></p>
+     <p class="small muted" id="contoh-ket" hidden>Terisi: 10 × 7 m, ± 120 drum 200 L (geometri survei, jumlah drum estimasi visual). Berat bangunan dan beban penggunaan tidak diukur, jadi harus Anda isi sendiri.</p>
+    </fieldset>
+
+    <fieldset>
+     <legend>2. Elemen apung</legend>
+     <div class="field"><label for="N">Jumlah drum</label><div class="with-unit"><input id="N" name="N" type="text" autocomplete="off" inputmode="numeric" step="1" min="1" required><span>buah</span></div></div>
+     <div class="field"><label for="jenis">Jenis drum</label>
+      <select id="jenis" name="jenis"><option value="drum200">Drum plastik 200 L, horizontal (Ø 581 × 890 mm, dimensi survei)</option><option value="kustom">Silinder horizontal ukuran lain</option></select></div>
+     <div class="row2" id="dim-kustom" hidden>
+      <div class="field"><label for="Dd">Diameter luar</label><div class="with-unit"><input id="Dd" name="Dd" type="text" autocomplete="off" inputmode="decimal" step="any" min="0"><span>mm</span></div></div>
+      <div class="field"><label for="Ld">Panjang luar</label><div class="with-unit"><input id="Ld" name="Ld" type="text" autocomplete="off" inputmode="decimal" step="any" min="0"><span>mm</span></div></div>
+     </div>
+     <div class="field" id="basis-wrap"><span class="label" id="basis-lbl">Dasar volume untuk kapasitas</span>
+      <span class="hint">Volume nominal 200 L adalah kapasitas isi; volume luar silinder dari dimensi sekitar 236 L. Gaya apung ditentukan volume luar yang terendam, tetapi dimensi drum di pasaran beragam.</span>
+      <div role="radiogroup" aria-labelledby="basis-lbl">
+       <label class="choice"><input type="radio" name="basis" value="nominal" checked> <span>Volume nominal 200 L (lebih hati-hati)</span></label>
+       <label class="choice"><input type="radio" name="basis" value="geometri"> <span>Volume luar dari dimensi</span></label>
+      </div></div>
+     <div class="field"><label for="md">Berat satu drum kosong (opsional)</label><span class="hint">Timbang atau lihat spesifikasi pemasok. Jika dikosongkan, berat drum tidak diperhitungkan.</span><div class="with-unit"><input id="md" name="md" type="text" autocomplete="off" inputmode="decimal" step="any" min="0"><span>kg</span></div></div>
+    </fieldset>
+
+    <fieldset>
+     <legend>3. Beban</legend>
+     <div class="field"><span class="label" id="mode-lbl">Cara mengisi berat bangunan</span>
+      <div role="radiogroup" aria-labelledby="mode-lbl">
+       <label class="choice"><input type="radio" name="wmode" value="total" checked> <span>Berat total (kg)</span></label>
+       <label class="choice"><input type="radio" name="wmode" value="luas"> <span>Berat per luas lantai (kg/m²)</span></label>
+      </div></div>
+     <div class="field"><label for="Ws">Berat bangunan</label><span class="hint">Rangka bawah, lantai, dinding, atap, dan perlengkapan tetap. Hitung dari volume dan berat jenis material, atau timbang komponen. Situs tidak menyediakan nilai bawaan karena berat Madrasah Apung belum diukur.</span><div class="with-unit"><input id="Ws" name="Ws" type="text" autocomplete="off" inputmode="decimal" step="any" min="0" required><span id="Ws-unit">kg</span></div></div>
+     <div class="field"><label for="Wl">Beban penggunaan (orang, perabot)</label><span class="hint">Isi per m² luas lantai. Rujuk standar pembebanan yang berlaku (mis. SNI 1727) untuk fungsi bangunan Anda. Isi 0 jika ingin melihat kondisi kosong.</span><div class="with-unit"><input id="Wl" name="Wl" type="text" autocomplete="off" inputmode="decimal" step="any" min="0" required><span>kg/m²</span></div></div>
+     <div class="field"><label for="rho">Massa jenis air</label><span class="hint">1025 kg/m³ adalah nilai tipikal air laut (literatur). Air payau bernilai lebih rendah; massa jenis di lokasi belum diukur.</span><div class="with-unit"><input id="rho" name="rho" type="text" autocomplete="off" inputmode="decimal" step="any" value="1025" min="990" max="1035"><span>kg/m³</span></div></div>
+    </fieldset>
+
+    <fieldset>
+     <legend>4. Kedalaman di lokasi (opsional)</legend>
+     <div class="field"><label for="Hd">Tinggi permukaan lantai di atas dasar drum</label><span class="hint">Untuk menghitung freeboard lantai. Kosongkan jika tidak diketahui.</span><div class="with-unit"><input id="Hd" name="Hd" type="text" autocomplete="off" inputmode="decimal" step="any" min="0"><span>m</span></div></div>
+     <div class="field"><label for="zb">Elevasi dasar perairan</label><span class="hint">Terhadap LWS; positif berarti di atas LWS. Di sekitar Madrasah Apung: +0,2 s.d. −0,5 m LWS (survei 2026).</span><div class="with-unit"><input id="zb" name="zb" type="text" autocomplete="off" inputmode="decimal" step="any"><span>m LWS</span></div>
+      <p class="small" style="margin-top:.4rem"><button type="button" class="btn small ghost" data-zb="0.2">+0,2 (paling dangkal)</button> <button type="button" class="btn small ghost" data-zb="-0.5">−0,5 (paling dalam)</button></p></div>
+     <div class="field"><label for="wl">Muka air yang ditinjau</label><span class="hint">Datum dari analisis pasang surut Timbulsloko, Juni–Juli 2026. Hanya berlaku untuk lokasi ini.</span>
+      <select id="wl" name="wl"><option value="LWS">LWS — 0,00 m</option><option value="MLWS">MLWS — 0,39 m</option><option value="MSL" selected>MSL — 0,60 m</option><option value="MHWS">MHWS — 0,81 m</option><option value="HWS">HWS — 1,14 m</option></select></div>
+     <div class="row2">
+      <div class="field"><label for="rate">Skenario penurunan tanah</label><select id="rate" name="rate"></select></div>
+      <div class="field"><label for="yr">Tahun ke depan</label><div class="with-unit"><input id="yr" name="yr" type="text" autocomplete="off" inputmode="numeric" step="1" min="0" max="10" value="0"><span>tahun</span></div></div>
+     </div>
+    </fieldset>
+
+    <div class="btn-row no-print"><button class="btn" type="submit">Hitung</button><button class="btn ghost" type="reset" id="reset">Kosongkan</button></div>
+    <p class="small muted" id="form-msg" role="status" aria-live="polite"></p>
+   </form>
+
+   <div class="calc-out" id="hasil" aria-live="polite">
+    <div class="out-block"><p class="muted" style="margin:0">Isi ukuran platform, jumlah drum, dan beban, lalu tekan <strong>Hitung</strong>.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section alt" id="rumus">
+ <div class="wrap grid g2">
+  <div class="prose">
+   <h2>Rumus yang dipakai</h2>
+   <ol class="formula-list">
+    <li>Luas lantai: <span class="formula">A = L × B</span></li>
+    <li>Volume luar satu drum: <span class="formula">V<sub>geo</sub> = π/4 × D² × ℓ</span>. Untuk drum 200 L survei: π/4 × 0,581² × 0,890 ≈ 0,236 m³.</li>
+    <li>Volume dasar kapasitas: <span class="formula">V<sub>b</sub></span> = 0,200 m³ (nominal) atau V<sub>geo</sub>.</li>
+    <li>Massa total: <span class="formula">M = W<sub>bangunan</sub> + q<sub>guna</sub> × A + N × m<sub>drum</sub></span></li>
+    <li>Kapasitas apung teoretis (semua drum terendam penuh): <span class="formula">M<sub>maks</sub> = ρ × N × V<sub>b</sub></span>; gaya: <span class="formula">F = M<sub>maks</sub> × g</span></li>
+    <li>Rasio pemanfaatan: <span class="formula">u = M / M<sub>maks</sub></span>. Jika u ≥ 1, drum tidak mampu mengapungkan beban.</li>
+    <li>Volume yang harus terendam per drum: <span class="formula">V<sub>r</sub> = M / (ρ × N)</span></li>
+    <li>Sarat drum horizontal h dicari dari luas segmen lingkaran: <span class="formula">A<sub>s</sub>(h) = R² acos((R−h)/R) − (R−h)√(2Rh − h²)</span>, dengan <span class="formula">A<sub>s</sub>(h) × ℓ = V<sub>r</sub></span> (diselesaikan numerik).</li>
+    <li>Freeboard drum: <span class="formula">D − h</span>; freeboard lantai: <span class="formula">H<sub>lantai</sub> − h</span></li>
+    <li>Kedalaman air: <span class="formula">d = z<sub>muka air</sub> − (z<sub>dasar</sub> − r × t)</span>, dengan r laju penurunan (m/tahun) dan t tahun. Ruang bebas di bawah drum: <span class="formula">d − h</span>.</li>
+    <li>Kepadatan tapak drum: <span class="formula">N × D × ℓ / A</span>. Di atas 100%, drum tidak muat dalam satu lapis di bawah denah tersebut.</li>
+   </ol>
+   <p class="small muted">g = 9,81 m/s². Satuan massa (kg) dipakai agar mudah dibandingkan; gaya dalam kN ditampilkan sebagai pelengkap.</p>
+  </div>
+  <div>
+   <h2>Asumsi dan batas penggunaan</h2>
+   <ul>
+    <li>Air tenang; tanpa gelombang, arus, atau angin. <span class="badge general" title="Status: Rekomendasi umum">Rekomendasi umum</span></li>
+    <li>Beban tersebar merata sehingga semua drum terendam sama dalam. Beban di satu sisi menyebabkan kemiringan dan sarat yang tidak merata.</li>
+    <li>Drum utuh, tertutup rapat, dan tidak bocor. Daya apung dari rangka kayu yang terendam diabaikan.</li>
+    <li>Stabilitas (kemiringan, titik berat, tinggi metasentrik) <strong>tidak</strong> dihitung.</li>
+    <li>Kekuatan rangka, sambungan drum–rangka, tali, dan tiang <strong>tidak</strong> dihitung.</li>
+    <li>Rasio M<sub>maks</sub>/M <strong>bukan faktor keamanan</strong>. Penelitian belum menetapkan kriteria cadangan daya apung. Sebagai pembanding, Adi et al. (2020) melaporkan rasio sekitar 1,5 untuk platform 232 drum yang mereka kaji; nilai itu bukan kriteria untuk lokasi ini.</li>
+    <li>Penurunan dasar perairan dianggap sama dengan laju penurunan tanah regional <span class="badge scenario" title="Status: Skenario">Skenario</span>. Sedimentasi, erosi, dan kenaikan muka laut tidak diperhitungkan.</li>
+    <li>Datum muka air hanya berlaku untuk perairan Timbulsloko.</li>
+   </ul>
+   <div class="note limit"><b>Keluaran yang belum dapat dihitung</b>Beban aman terhadap gelombang, gaya pada tiang dan tali, kekuatan sambungan, dan ketahanan fatigue ditampilkan sebagai “Menunggu hasil pemodelan tervalidasi”. Keluaran ini akan aktif setelah nilainya diisi di <code>assets/data/hasil-model.json</code> oleh tim peneliti.</div>
+  </div>
+ </div>
+</section>
+<section id="ringkasan-cetak" class="print-only"></section>
+
+</main>
+<footer class="site-foot">
+ <div class="wrap">
+  <div class="foot-grid">
+   <div>
+    <h2>Floating House</h2>
+    <p>Situs diseminasi penelitian <i>Coupled Land Subsidence–Wave Modeling for Floating Houses: Analisis Respon Struktur dan Aplikasi Web Panduan Desain Rumah Apung Tahan Gelombang</i> (Penelitian Fundamental, Kemdiktisaintek, 2026).</p>
+    <p>Program Studi Teknik Kelautan, Institut Teknologi Bandung, bersama Politeknik Elektronika Negeri Surabaya. <span class="muted">[Identitas institusi dan logo menunggu konfirmasi ketua tim.]</span></p>
+   </div>
+   <div>
+    <h2>Penelitian</h2>
+    <ul><li><a href="studi-kasus.html">Studi kasus Timbulsloko</a></li><li><a href="data-lingkungan.html">Data lingkungan</a></li><li><a href="hasil-penelitian.html">Hasil &amp; status</a></li><li><a href="referensi.html">Referensi</a></li></ul>
+   </div>
+   <div>
+    <h2>Alat bantu</h2>
+    <ul><li><a href="panduan-desain.html">Panduan desain</a></li><li><a href="kalkulator.html">Kalkulator daya apung</a></li><li><a href="pemeliharaan.html">Daftar periksa inspeksi</a></li><li><a href="tentang.html">Tentang &amp; batas penggunaan</a></li></ul>
+   </div>
+  </div>
+  <p class="foot-note">Situs ini adalah sarana diseminasi penelitian dan alat bantu awal. Keluaran situs bukan desain teknik, bukan sertifikasi, dan bukan jaminan keselamatan. Hasil pemodelan gelombang, OrcaFlex, dan Abaqus belum final. Pembaruan konten terakhir: 21 Oktober 2026.</p>
+ </div>
+</footer>
+</body>
+</html>
